@@ -1,6 +1,35 @@
+% !TeX root = ../main.tex
 \documentclass[./../main.tex]{subfiles}
 
 \begin{document}
-Dù là tiền điện tử với các chứng năng ưu việt, nhưng việc tránh khỏi các tấn công là điều cần thiết từ người dùng tới các hệ thống đang được xây dựng. Do vậy, cần được trang bị các kiến thức cần thiết tới người dùng và các nhà phát triển hệ thống.
+
+\subsection{Thiết kế bậc cao}
+
+Hệ thống có 5 thành phần chính:
+\begin{enumerate}
+	\item Web Client: dành cho người dùng máy tính.
+	\item Mobile App: dành cho người dùng di động.
+	\item Server: Cung cấp API để client hiển thị.
+	\item Cache Server: lưu trữ các dữ liệu được truy cập nhiều. Cụ thể, cache lưu lại các token bị blacklist.
+	\item Database: lưu trữ thông tin về các thực thể trên hệ thống.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/high_level_diagram.png}
+	\caption{Biểu đồ thiết kế bậc cao}
+\end{figure}
+
+\subsection{Thiết kế API}
+
+API của hệ thống được thiết kế theo chuẩn REST để dễ dàng sử dụng. Tài liệu về API được lập trình viên backend tạo và upload lên \url{https://honyomi.stoplight.io/}.
+
+\subsection{Thiết kế cơ sở dữ liệu}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/image8.png}
+	\caption{Biểu đồ thiết kế cơ sở dữ liệu}
+\end{figure}
 
 \end{document}
