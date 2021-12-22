@@ -3,33 +3,22 @@
 
 \begin{document}
 
-\subsection{Thiết kế bậc cao}
+Ứng dụng được triển khai tự động bằng Gitlab CI/CD thông qua các pipeline được config trên gitlab-ci.yml. Cụ thể, khi một commit được merge vào nhánh \code{master}, hệ thống CI sẽ tự động chạy toàn bộ unit test, build code ra phiên bản production và deploy code lên môi trường phù hợp.
 
-Hệ thống có 5 thành phần chính:
-\begin{enumerate}
-	\item Web Client: dành cho người dùng máy tính.
-	\item Mobile App: dành cho người dùng di động.
-	\item Server: Cung cấp API để client hiển thị.
-	\item Cache Server: lưu trữ các dữ liệu được truy cập nhiều. Cụ thể, cache lưu lại các token bị blacklist.
-	\item Database: lưu trữ thông tin về các thực thể trên hệ thống.
-\end{enumerate}
+Cách làm này không những tiết kiệm thời gian deploy, mà còn đảm bảo code hoạt động đúng như thiết kế trên môi trường production.
+
+Với sản phẩm này, nhóm deploy frontend trên GitLab Pages, một trang hosting miễn phí. Backend thì được build thành docker image và chạy trên một máy ảo của Google Cloud.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./images/high_level_diagram.png}
-	\caption{Biểu đồ thiết kế bậc cao}
+	\includegraphics[width=\linewidth]{./images/pipeline_1.png}
+	\caption{Pipeline cho Frontend}
 \end{figure}
 
-\subsection{Thiết kế API}
-
-API của hệ thống được thiết kế theo chuẩn REST để dễ dàng sử dụng. Tài liệu về API được lập trình viên backend tạo và upload lên \url{https://honyomi.stoplight.io/}.
-
-\subsection{Thiết kế cơ sở dữ liệu}
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./images/image8.png}
-	\caption{Biểu đồ thiết kế cơ sở dữ liệu}
+	\includegraphics[width=\linewidth]{./images/pipeline_2.png}
+	\caption{Pipeline cho backend}
 \end{figure}
 
 \end{document}

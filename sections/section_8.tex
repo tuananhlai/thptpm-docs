@@ -2,5 +2,23 @@
 \documentclass[./../main.tex]{subfiles}
 
 \begin{document}
-	% content here
+
+Ứng dụng được triển khai tự động bằng Gitlab CI/CD thông qua các pipeline được config trên gitlab-ci.yml. Cụ thể, khi một commit được merge vào nhánh \code{master}, hệ thống CI sẽ tự động chạy toàn bộ unit test, build code ra phiên bản production và deploy code lên môi trường phù hợp.
+
+Cách làm này không những tiết kiệm thời gian deploy, mà còn đảm bảo code hoạt động đúng như thiết kế trên môi trường production.
+
+Với sản phẩm này, nhóm deploy frontend trên GitLab Pages, một trang hosting miễn phí. Backend thì được build thành docker image và chạy trên một máy ảo của Google Cloud.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/pipeline_1.png}
+	\caption{Pipeline cho Frontend}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/pipeline_2.png}
+	\caption{Pipeline cho backend}
+\end{figure}
+
 \end{document}
