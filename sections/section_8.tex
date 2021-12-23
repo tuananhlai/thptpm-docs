@@ -7,7 +7,11 @@
 
 Cách làm này không những tiết kiệm thời gian deploy, mà còn đảm bảo code hoạt động đúng như thiết kế trên môi trường production.
 
-Với sản phẩm này, nhóm deploy frontend trên GitLab Pages, một trang hosting miễn phí. Backend thì được build thành docker image và chạy trên một máy ảo của Google Cloud.
+Với sản phẩm này, nhóm deploy frontend trên GitLab Pages, một trang hosting miễn phí.
+Backend thì được build thành docker image và chạy trên một máy ảo của Google Cloud.
+Ngoài ra, nhóm có sử dụng Docker để triển khai việc ảo hóa nên nhóm còn sử dụng thêm Nginx như một API Gateway đồng thời như
+ là Reverse Proxy. Việc này sẽ đảm bảo cho hệ thống có khả năng scale up bằng cách tăng server API và che giấu đi việc cân
+  bằng tải này. Đồng thời Nginx còn hỗ trợ việc logging và chống tấn công.
 
 \begin{figure}[H]
 	\centering
