@@ -2,256 +2,43 @@
 \documentclass[./../main.tex]{subfiles}
 
 \begin{document}
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
-\begin{center}
-    \begin{longtable}{|p{.3\textwidth}|p{.35\textwidth}|p{.25\textwidth}|p{.1\textwidth}|}
-        \hline
-        \textbf{Phân loại công việc} &
-          \textbf{Tên công việc} &
-          \textbf{Thành viên phụ trách} &
-          \textbf{Mức độ hoàn thành} \\ \hline
-        \endhead
-        %
-        \multirow{3}{*}{Lập kế hoạch} &
-          Quyết định công nghệ sử dụng &
-          Cả nhóm &
-          100\% \\ \cline{2-4} 
-         &
-          Viết Product Backlog &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Setup CI/CD &
-          Lại Tuấn Anh &
-          100\% \\ \hline
-        \multirow{4}{*}{\parbox{.3\textwidth}{Thu thập vào phân tích yêu cầu}} &
-          Xác định đối tượng sản phẩm &
-          Cả nhóm &
-          100\% \\ \cline{2-4} 
-         &
-          Xác định yêu cầu chức năng &
-          Cả nhóm &
-          100\% \\ \cline{2-4} 
-         &
-          Xác định yêu cầu phi chức năng &
-          Cả nhóm &
-          100\% \\ \cline{2-4} 
-         &
-          Viết tài liệu ca sử dụng &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Đình Biển\\ Lại Tuấn Anh\end{tabular} &
-          100\% \\ \hline
-        \multirow{2}{*}{Thiết kế giao diện} &
-          Vẽ wireframe (web + mobile) &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Quyết định thiết kế tổng thể &
-          \begin{tabular}[c]{@{}l@{}}Triệu Vũ Hải\\ Phạm Thị Dân\end{tabular} &
-          100\% \\ \hline
-        \multirow{2}{*}{Thiết kế hệ thống} &
-          Thiết kế API &
-          \begin{tabular}[c]{@{}l@{}}Lại Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Thiết kế cơ sở dữ liệu &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Đình Biển\\ Lại Tuấn Anh\end{tabular} &
-          100\% \\ \hline
-        \multirow{15}{*}{Cài đặt - Web User} &
-          Các thành phần giao diện (nút, ô nhập liệu, thẻ hiển thị, …) &
-          \begin{tabular}[c]{@{}l@{}}Phạm Thị Dân\\ Triệu Vũ Hải\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình trang chủ và tích hợp API &
-          Phạm Thị Dân &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình đăng nhập &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp tính năng xác thực người dùng và đăng nhập bằng Google &
-          \begin{tabular}[c]{@{}l@{}}Phạm Thị Dân\\ Lại Tuấn Anh\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình đăng ký và tích hợp API &
-          Triệu Vũ Hải &
-           \\ \cline{2-4} 
-         &
-          Màn hình hiển thị danh sách chương &
-          Phạm Thị Dân &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp API màn hình hiển thị chương &
-          Phạm Thị Dân &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình đọc truyện &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp API màn hình đọc truyện &
-          Phạm Thị Dân &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình khám phá (tìm kiếm và lọc truyện theo danh mục, tác giả, …) &
-          Phạm Thị Dân &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp API màn hình khám phá (tìm và lọc truyện) &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình danh sách truyện yêu thích và tích hợp API &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình lịch sử đọc truyện và tích hợp API &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình cài đặt thông tin cá nhân và tích hợp API &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt tính năng comment và tích hợp API &
-          Phạm Thị Dân &
-          100\% \\ \hline
-        \multirow{7}{*}{Cài đặt - Web Admin} &
-          Màn hình đăng nhập admin &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý user (danh sách, filter, thêm, sửa user) &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý tác giả (danh sách, filter, thêm, sửa, xóa tác giả) &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý danh mục(danh sách, filter, thêm, sửa, xóa danh mục) &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý truyện (danh sách, filter, thêm, sửa, xóa truyện) &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý thông tin chi tiết của từng truyện (thông tin chung, chỉnh sửa danh sách tác giả, danh sách danh mục, danh sách chapter) &
-          Triệu Vũ Hải &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình quản lý nội dung khuyến nghị (danh sách, filter, thêm, sửa, xóa khuyến nghị) &
-          Triệu Vũ Hải &
-          100\% \\ \hline
-        \multirow{11}{*}{Cài đặt - Mobile} &
-          Màn hình trang chủ vả tích hợp API &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình khám phá, tìm kiếm truyện và tích hợp API &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình bảng xếp hạng, danh sách yêu thích và tích hợp API &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình lịch sử đọc truyện và tích hợp API &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình thông tin cá nhân và tích hợp API &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình bình luận &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp API màn hình bình luận &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình thông tin truyện, danh sách chương và tích hợp API &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình đọc truyện và tích hợp API &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Màn hình đăng nhập, đăng ký &
-          Nguyễn Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Tích hợp API màn hình đăng nhập, đăng ký &
-          Nguyễn Đình Biển &
-          100\% \\ \hline
-        \multirow{12}{*}{Cài đặt - Backend} &
-          Cài đặt API auth (theo mô hình OAuth) + đăng nhập bằng Google &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API Manga \& Chapter &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API danh mục &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Đình Biển\\ Lại Tuấn Anh\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API tác giả &
-          \begin{tabular}[c]{@{}l@{}}Nguyễn Đình Biển\\ Lại Tuấn Anh\end{tabular} &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API truyện yêu thích &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API lịch sử đọc &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API báo cáo lỗi truyện &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API quản lý user &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt seeder cho dev &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt API comment &
-          Nguyễn Đình Biển &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt tính năng thông báo chương truyện mới (qua mail) &
-          Lại Tuấn Anh &
-          100\% \\ \cline{2-4} 
-         &
-          Cài đặt tính năng thông báo chương truyện mới qua notification &
-          Lại Tuấn Anh &
-          80\% \\ \hline
-        Kiểm thử &
-          Kiểm thử đơn vị (mỗi thành viên tự kiểm thử phần của mình) &
-          Cả nhóm &
-          100\% \\ \hline
-        \multirow{2}{*}{Khác} &
-          Viết báo cáo &
-          Cả nhóm &
-          100\% \\ \cline{2-4} 
-         &
-          Deploy frontend và backend &
-          \begin{tabular}[c]{@{}l@{}}Lại Tuấn Anh\\ Nguyễn Đình Biển\end{tabular} &
-          100\% \\ \hline
-        \end{longtable}
-\end{center}
 
+\subsection{Thiết kế bậc cao}
+
+Hệ thống có 5 thành phần chính:
+\begin{enumerate}
+	\item Web Client: dành cho người dùng máy tính.
+	\item Mobile App: dành cho người dùng di động.
+	\item Server: Cung cấp API để client hiển thị.
+	\item Cache Server: lưu trữ các dữ liệu được truy cập nhiều. Cụ thể, cache lưu lại các token bị blacklist.
+	\item Database: lưu trữ thông tin về các thực thể trên hệ thống.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/high_level_diagram.png}
+	\caption{Biểu đồ thiết kế bậc cao}
+\end{figure}
+
+\subsection{Thiết kế API}
+
+API của hệ thống được thiết kế theo chuẩn REST để dễ dàng sử dụng. Tài liệu về API được lập trình viên backend tạo và upload lên \url{https://honyomi.stoplight.io/}.
+
+\subsection{Thiết kế cơ sở dữ liệu}
+Dù nhóm quyết định sử dụng cơ sở dữ liệu NoSQL dạng Document-base nhưng các lược đồ của cơ sở dữ liệu vẫn được nhóm xây dựng dựa trên mô hình thực thể - quan hệ (ER).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{./images/image8.png}
+	\caption{Biểu đồ thiết kế cơ sở dữ liệu}
+\end{figure}
+Dựa vào phân tích ER trên, các lược đồ được sinh ra sẽ gồm các Document sau:
+\begin{itemize}
+	\item User: lưu thông tin và cài đặt của người dùng.
+	\item History: lưu lịch sử đọc truyện của người dùng.
+	\item Favorite: lưu danh sách yêu thích của người dùng.
+	\item Manga: lưu danh sách truyện trên hệ thống.
+	\item Chapter: lưu danh sách chương truyện.
+	\item Category: lưu thể loại truyên.
+	\item Author: lưu danh sách tác giả.
+\end{itemize}
 \end{document}
