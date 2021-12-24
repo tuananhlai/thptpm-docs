@@ -25,11 +25,20 @@ Hệ thống có 5 thành phần chính:
 API của hệ thống được thiết kế theo chuẩn REST để dễ dàng sử dụng. Tài liệu về API được lập trình viên backend tạo và upload lên \url{https://honyomi.stoplight.io/}.
 
 \subsection{Thiết kế cơ sở dữ liệu}
-
+Dù nhóm quyết định sử dụng cơ sở dữ liệu NoSQL dạng Document-base nhưng các lược đồ của cơ sở dữ liệu vẫn được nhóm xây dựng dựa trên mô hình thực thể - quan hệ (ER).
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./images/image8.png}
 	\caption{Biểu đồ thiết kế cơ sở dữ liệu}
 \end{figure}
-
+Dựa vào phân tích ER trên, các lược đồ được sinh ra sẽ gồm các Document sau:
+\begin{itemize}
+	\item User
+	\item History
+	\item Favorite
+	\item Manga
+	\item Chapter
+	\item Category
+	\item Author
+\end{itemize}
 \end{document}
