@@ -80,6 +80,7 @@ Ngoài ra, Firebase được triển khai như một hệ thống ngoài của h
 \end{figure}
 
 \subsubsection{Đăng nhập và đăng ký}
+
 Người dùng có thể đăng nhập tài khoản thông qua 2 cách:
 \begin{itemize}
 \item Bằng email/username và mật khẩu.
@@ -94,7 +95,10 @@ Tuy nhiên, họ sẽ không thể truy cập được vào các tính năng man
 \end{itemize}
 Người dùng có thể chọn một quyển truyện bất kỳ trên hệ thống.
 Sau đó, họ sẽ chọn chương mình muốn đọc và hệ thống sẽ hiển thị danh sách các trang cho người dùng.
-Các chương được hiển thị sẽ phụ thuộc vào cài đặt và locale của người dùng. (V.D. Hệ thống hiển thị chương truyện có ngôn ngữ tiếng Việt cho một người dùng ở Việt Nam). 
+
+
+Các chương được hiển thị sẽ phụ thuộc vào cài đặt và locale của người dùng.
+(V.D. Hệ thống hiển thị chương truyện có ngôn ngữ tiếng Việt cho một người dùng ở Việt Nam).
 
 
 Yêu cầu
@@ -103,9 +107,11 @@ Yêu cầu
 \item Người dùng có thể chọn thủ công ngôn ngữ của các chương
 \end{itemize}
 Hệ thống cần hiển thị chương với ngôn ngữ tiếng Anh nếu chương với ngôn ngữ người dùng không tồn tại.
+
 \subsubsection{Về việc hiển thị trang truyện}
+
+Hệ thống cần cung cấp khả năng customize tối thiểu 2 yếu tố sau:
 \begin{itemize}
-\item Hệ thống cần cung cấp khả năng customize tối thiểu 2 yếu tố sau:
 \item Thứ tự trang (trái sang phải, phải sang trái, trên xuống dưới).
 \item Page Fit (Fit theo chiều ngang và chiều dọc)
 \item Giao diện trang đọc truyện cần tối giản.
@@ -125,17 +131,18 @@ Người dùng có thể tìm kiếm truyện trên hệ thống theo tên và f
 \item Lướt xem
 \end{itemize}
 Yêu cầu: Danh sách truyện cần được phân trang trước khi trả về cho người dùng.
-\subsubsection{Lưu truyện vào danh sách yêu thích}
-Người dùng cá nhân có thể lưu truyện trên hệ thống vào danh sách yêu thích của mình.
 
-Người dùng có thể xem danh sách này bất cứ lúc nào.
+\subsubsection{Lưu truyện vào danh sách yêu thích}
+Người dùng cá nhân có thể lưu truyện trên hệ thống vào danh sách yêu thích của mình. Người dùng có thể xem danh sách này bất cứ lúc nào.
 
 
 Tác nhân: Người dùng cá nhân (user)
+
 \subsubsection{Xem truyện trong danh sách yêu thích}
 Người dùng cá nhân có thể xem và tìm kiếm truyện theo tên trong danh sách yêu thích.
 
 Tác nhân: Người dùng cá nhân (user)
+
 \subsubsection{Xem lịch sử đọc truyện}
 Tác nhân: Người dùng cá nhân
 \begin{itemize}
@@ -144,13 +151,14 @@ Tác nhân: Người dùng cá nhân
 \item Chương truyện đã đọc gần đây nhất
 \end{itemize}
 Với mỗi chương truyện, hệ thống sẽ lưu các thông tin sau: Đã đọc chương truyện này hay chưa.
+
 \subsubsection{Báo cáo lỗi truyện}
 Hệ thống sẽ tự động gửi báo cáo về BE khi một trang truyện không load được. Thông tin gửi bao gồm:
 
 
 Tác nhân: không có
 \begin{itemize}
-\item IP người dùng?
+\item IP người dùng
 \item Đường dẫn đến trang truyện bị lỗi.
 \item Đường dẫn dùng để load trang truyện bị lỗi.
 \end{itemize}
@@ -159,6 +167,7 @@ Thông tin này sẽ được lưu lại và hiển thị cho quản trị viên
 \item Cài đặt cá nhân
 \item Người dùng có thể cài đặt các thông tin sau: Email, Mật khẩu và Các cài đặt cá nhân.
 \end{itemize}
+
 \subsubsection{Tạo truyện mới}
 Quản trị viên có thể tạo truyện mới bằng giao diện admin của hệ thống.
 QTV sẽ nhập vào thông tin cơ bản, hệ thống sẽ thực hiện validate các thông tin đó và gửi lên backend server.
@@ -174,7 +183,7 @@ Thông tin để tạo truyện bao gồm:
 \item Tên phiên âm (romaji) của truyện
 \item Tên quốc tế (tiếng Anh) của truyện
 \item Độ tuổi
-\item Mô tả?
+\item Mô tả
 \item Danh sách tác giả
 \item Danh sách thể loại
 \item Loại manga (manhwa, manga, manhua, doujin, …)
@@ -185,6 +194,7 @@ Yêu cầu
 \item Cần cung cấp tên truyện cho ít nhất 1 ngôn ngữ
 \item Cần có checkbox để đánh dấu truyện thuộc thể loại nsfw.
 \end{itemize}
+
 \subsubsection{Thêm chương truyện}
 Quản trị viên có thể thêm chương truyện cho một truyện có sẵn.
 
@@ -199,9 +209,10 @@ Thông tin chương truyện bao gồm:
 \item Số của chương truyện
 \item url đến thumbnail của chương?
 \end{itemize}
+
 \subsubsection{Sửa chương truyện}
+Quản trị viên có thể sửa thông tin của chương truyện. Thông tin có thể sửa:
 \begin{itemize}
-\item Quản trị viên có thể sửa thông tin của chương truyện. Thông tin có thể sửa:
 \item Tên chương truyện (nhiều ngôn ngữ)
 \item Danh sách link các trang truyện
 \item Ngôn ngữ của chương truyện (sau khi dịch)
@@ -210,11 +221,13 @@ Thông tin chương truyện bao gồm:
 \end{itemize}
 
 Tác nhân: Quản trị viên
+
 \subsubsection{Gửi thông báo}
 Quản trị viên có thể gửi thông báo đến người thông qua Email về thông tin Chapter mới, Manga mới được ra mắt.
 
 
 Tác nhân: Quản trị viên
+
 \subsubsection{Xem danh sách báo cáo lỗi}
 Quản trị viên có thể xem danh sách báo cáo lỗi load truyện và resolve nó sau khi đã giải quyết xong vấn đề.
 
@@ -222,7 +235,7 @@ Quản trị viên có thể xem danh sách báo cáo lỗi load truyện và re
 Tác nhân: Quản trị viên
 
 
-Yêu cầu
+Yêu cầu:
 \begin{itemize}
 \item Quản trị viên có thể hoàn tác sau khi bấm resolve để tránh bấm nhầm.
 \item Không xóa báo cáo cũ.
