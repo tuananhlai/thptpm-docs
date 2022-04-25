@@ -551,25 +551,23 @@ này có thể dễ dàng bảo trì và nâng cấp phần mềm.
 \subsubsection{Đăng nhập hệ
 thống}\label{ux111ux103ng-nhux1eadp-hux1ec7-thux1ed1ng-1}}
 
-\textbf{Mô tả tóm tắt}
+\paragraph*{Mô tả tóm tắt} ~\\
 
 Người dùng đăng nhập vào hệ thống với tài khoản được cấp.
 
-\textbf{Luồng sự kiện}
+\paragraph*{Luồng sự kiện} ~\\
 
 \emph{Luồng chính:} Ca sử dụng này bắt đầu khi người dùng mong muốn đăng
 nhập vào hệ thống.
 
-\begin{table}[]
-  \begin{tabular}{|l|l|l}
-  \cline{1-2}
-  \textbf{Hành động}                   & \textbf{Hệ thống phản hồi}                                                    & \textbf{Dữ liệu}              \\ \cline{1-2}
-  Người dùng truy cập trang đăng nhập. & Hệ thống yêu cầu người dùng nhập email và mật khẩu.                           &                               \\ \cline{1-2}
-  Người dùng điền các thông tin.       & Hệ thống kiểm định thông tin và điều hướng người dùng vào hệ thống theo Role. & Email và mật khẩu người dùng. \\ \cline{1-2}
+\begin{table}[H]
+  \begin{tabular}{|p{.4\textwidth}|p{.3\textwidth}|p{.3\textwidth}|}
+  \hline
+  \textbf{Hành động}                   & \textbf{Hệ thống phản hồi}                                                    & \textbf{Dữ liệu}              \\ \hline
+Người dùng truy cập trang đăng nhập. & Hệ thống yêu cầu người dùng nhập email và mật khẩu.                           &                               \\ \hline
+Người dùng điền các thông tin.       & Hệ thống kiểm định thông tin và điều hướng người dùng vào hệ thống theo Role. & Email và mật khẩu người dùng. \\ \hline
   \end{tabular}
-  \caption{Luồng sự kiện đăng nhập }
-  \label{tab:my-table}
-  \end{table}
+\end{table}
 
 \emph{Luồng thay thế:}
 
@@ -598,24 +596,21 @@ nhập vào hệ thống.
   \end{quote}
 \end{itemize}
 
-\textbf{Yêu cầu đặc biệt}
+\paragraph*{Yêu cầu đặc biệt} ~\\
 
 Người dùng đã có tài khoản trong hệ thống.
 
-\textbf{Điều kiện đầu}
+\paragraph*{Điều kiện đầu} ~\\
 
 Không có.
 
-\textbf{Điều kiện cuối}
+\paragraph*{Điều kiện cuối} ~\\
 
 Nếu ca sử dụng thành công, người dùng đã được đăng nhập vào hệ thống,
 ngược lại, trạng thái hệ thống không thay đổi.
 
-\textbf{Các vấn đề mở}
+\paragraph*{Các vấn đề mở} ~\\
 
 Không có.
-
-\textbf{Biểu đồ hoạt động}
-
 
 \end{document}
