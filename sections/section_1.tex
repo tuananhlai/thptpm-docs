@@ -2,20 +2,127 @@
 \documentclass[./../main.tex]{subfiles}
 
 \begin{document}
-\subsection{Mô tả vấn đề}
+% \subsection{Mô tả vấn đề}
 
-Thế kỉ XXI, thế kỉ của sự hội nhập và toàn cầu hoá, đã và đang có rất nhiều nền văn hóa du nhập và được đón nhận một cách mạnh mẽ tại Việt Nam, đặc biệt phải kể đến là văn hóa Nhật Bản. Một trong các loại hình văn hóa Nhật Bản vô cùng được ưa chuộng tại Việt Nam chính là văn hóa truyện tranh (manga). Cùng với nhu cầu đọc truyện ngày càng lớn của độc giả nước nhà, ngày càng nhiều các trang web đọc truyện được dựng lên.
+% Thế kỉ XXI, thế kỉ của sự hội nhập và toàn cầu hoá, đã và đang có rất nhiều nền văn hóa du nhập và được đón nhận một cách mạnh mẽ tại Việt Nam, đặc biệt phải kể đến là văn hóa Nhật Bản. Một trong các loại hình văn hóa Nhật Bản vô cùng được ưa chuộng tại Việt Nam chính là văn hóa truyện tranh (manga). Cùng với nhu cầu đọc truyện ngày càng lớn của độc giả nước nhà, ngày càng nhiều các trang web đọc truyện được dựng lên.
 
-Là các độc giả truyện tranh lâu năm, các thành viên trong nhóm đều đã trải nghiệm rất nhiều trang web đọc truyện hiện nay và cùng đưa đến một quan điểm chung: các trang web đọc truyện tại Việt Nam vẫn còn tương đối giống nhau và có các điểm yếu cần được cải thiện:
+% Là các độc giả truyện tranh lâu năm, các thành viên trong nhóm đều đã trải nghiệm rất nhiều trang web đọc truyện hiện nay và cùng đưa đến một quan điểm chung: các trang web đọc truyện tại Việt Nam vẫn còn tương đối giống nhau và có các điểm yếu cần được cải thiện:
+
+% \begin{itemize}
+% 	\item Các trang web đang quan tâm tới số lượng hơn là chất lượng. Chất lượng hình ảnh chưa được thật sự tốt, các nhóm dịch tự do up truyện kém chất lượng.
+% 	\item Giao diện xấu, thiếu tính nhất quán, nhiều quảng cáo, chưa đem lại được sự tập trung, nguồn cảm hứng cho người đọc.
+% 	\item Thường chỉ cung cấp một ngôn ngữ duy nhất (Tiếng Việt), rất nhiều độc giả khi muốn đọc truyện dưới nhiều ngôn ngữ khác nhau sẽ phải tìm đọc thêm ở các trang web khác.
+% \end{itemize}
+
+% Nhận thấy lĩnh vực web đọc truyện vẫn còn tiềm năng có thể khai thác, các thành viên trong nhóm đã đồng nhất với nhau về ý tưởng tạo ra một trang web có thể khắc phục các hạn chế nêu trên. Vừa đứng trên vị trí của một người đọc truyện tranh, vừa đứng trên vị trí của người phát triển sản phẩm, các thành viên tin rằng sản phẩm lần này của nhóm có thể đưa ra các cải thiện đột phá để có thể khắc phục các điểm còn thiếu sót trên các trang đọc truyện hiện nay.
+
+% Vì vậy nhóm đã quyết định tạo ra dự án web đọc truyện tranh \textbf{Honyomi}.
+
+Phần này sẽ giới thiệu ngắn gọn về vấn đề với hệ thống quản lý thực tập
+hiện tại của trường và ý tưởng để phát triển hệ thống mới.
+
+\subsection{Hiện trạng}
+
+Hệ thống UETWork hiện tại được sinh ra để giúp sinh viên hoàn thành
+chuyên đề thực tập tại trường của mình. Hệ thống là một nền tảng kết nối
+giữa sinh viên và nhà tuyển dụng, giúp sinh viên tìm được nơi thực tập
+chất lượng dễ dàng hơn.
+
+Tuy vậy, trong vòng 2 năm vừa qua, hệ thống đã biểu hiện một số nhược
+điểm như sau:
 
 \begin{itemize}
-	\item Các trang web đang quan tâm tới số lượng hơn là chất lượng. Chất lượng hình ảnh chưa được thật sự tốt, các nhóm dịch tự do up truyện kém chất lượng.
-	\item Giao diện xấu, thiếu tính nhất quán, nhiều quảng cáo, chưa đem lại được sự tập trung, nguồn cảm hứng cho người đọc.
-	\item Thường chỉ cung cấp một ngôn ngữ duy nhất (Tiếng Việt), rất nhiều độc giả khi muốn đọc truyện dưới nhiều ngôn ngữ khác nhau sẽ phải tìm đọc thêm ở các trang web khác.
+\item
+  \begin{quote}
+  Sinh viên được phép tạo công ty tùy ý, dẫn đến việc lặp dữ liệu.
+  \end{quote}
+\item
+  \begin{quote}
+  Giao diện chưa rõ ràng, khó sử dụng cho người dùng.
+  \end{quote}
+\item
+  \begin{quote}
+  Chi hỗ trợ cho người dùng của khoa Công Nghệ Thông Tin.
+  \end{quote}
+\item
+  \begin{quote}
+  Không cung cấp tính năng cho giảng viên / công ty đối tác.
+  \end{quote}
+\item
+  \begin{quote}
+  Chứa một số vấn đề về bảo mật / lỗi thiết kế. Ví dụ, hệ thống cho phép
+  người dùng đặt lại mật khẩu cho bất kỳ người dùng nào khác trên hệ
+  thống.
+  \end{quote}
+\item
+  \begin{quote}
+  Mọi liên lạc với người dùng được thực hiện trong ứng dụng thay vì qua
+  email, khiến người dùng phải kiểm tra ứng dụng thường xuyên hơn và
+  tăng khả năng một thông báo bị bỏ qua.
+  \end{quote}
+\item
+  \begin{quote}
+  Giao diện chưa hỗ trợ đa ngôn ngữ cho những sinh viên quốc tế.
+  \end{quote}
+\item
+  \begin{quote}
+  Không có thống kê dữ liệu.
+  \end{quote}
+\item
+  \begin{quote}
+  Thiếu bộ lọc dữ liệu cho các bảng.
+  \end{quote}
 \end{itemize}
 
-Nhận thấy lĩnh vực web đọc truyện vẫn còn tiềm năng có thể khai thác, các thành viên trong nhóm đã đồng nhất với nhau về ý tưởng tạo ra một trang web có thể khắc phục các hạn chế nêu trên. Vừa đứng trên vị trí của một người đọc truyện tranh, vừa đứng trên vị trí của người phát triển sản phẩm, các thành viên tin rằng sản phẩm lần này của nhóm có thể đưa ra các cải thiện đột phá để có thể khắc phục các điểm còn thiếu sót trên các trang đọc truyện hiện nay.
+Giải quyết vấn đề này đòi hỏi việc tái cấu trúc toàn bộ hệ thống thực
+tập hiện tại. Vì vậy, TS. Dương Lê Minh đề xuất thiết kế và phát triển
+một hệ thống mới từ đầu.
 
-Vì vậy nhóm đã quyết định tạo ra dự án web đọc truyện tranh \textbf{Honyomi}.
+\subsection{Nhu cầu quản lý thực tập tại trường Đại học Công Nghệ}
+
+Trong quá trình làm việc với TS. Dương Lê Minh, em đã nhận ra những nhu
+cầu cho hệ thống thực tập như sau:
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Giao diện cần được thiết kế dễ hiểu hơn, giúp người dùng hoàn thành
+  công việc trong thời gian nhanh nhất có thể.
+  \end{quote}
+\item
+  \begin{quote}
+  Dữ liệu phải được làm sạch. Ví dụ, tên công ty phải được duyệt bởi
+  quản trị viên trước khi lưu vào cơ sở dữ liệu
+  \end{quote}
+\item
+  \begin{quote}
+  Hỗ trợ người dùng của nhiều khoa khác nhau.
+  \end{quote}
+\item
+  \begin{quote}
+  Cần tính năng chấm điểm / quản lý sinh viên cho người dùng giảng viên.
+  \end{quote}
+\item
+  \begin{quote}
+  Cần tính năng quản lý sinh viên / chấp nhận yêu cầu thực tập cho người
+  dùng đối tác.
+  \end{quote}
+\item
+  \begin{quote}
+  Thông báo tới người dùng nên được gửi qua email thay vì trong app.
+  \end{quote}
+\item
+  \begin{quote}
+  Cần hỗ trợ đa ngôn ngữ cho sinh viên quốc tế.
+  \end{quote}
+\item
+  \begin{quote}
+  Cần có giao diện và API để thống kê dữ liệu.
+  \end{quote}
+\item
+  \begin{quote}
+  Cần thêm bộ lọc cho các bảng trong màn hình quản lý.
+  \end{quote}
+\end{itemize}
 
 \end{document}
