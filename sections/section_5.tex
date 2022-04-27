@@ -3,5 +3,523 @@
 
 \begin{document}
 
+\subsection{Đăng nhập hệ thống}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng đăng nhập vào hệ thống với tài khoản được cấp.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng này bắt đầu khi người dùng mong muốn đăng
+nhập vào hệ thống.
+
+\begin{table}[H]
+    \caption{Đăng nhập hệ thống - luồng chính}
+    \label{tab:login_flow_main}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Hành động}                         & \textbf{Hệ thống phản hồi}                                                                      & \textbf{Dữ liệu}                   \\ \hline
+		Người dùng truy cập trang đăng nhập. & Hệ thống yêu cầu người dùng nhập email và mật khẩu.                                   &                                        \\ \hline
+		Người dùng điền các thông tin.        & Hệ thống kiểm định thông tin và điều hướng người dùng vào hệ thống theo Role. & Email và mật khẩu người dùng. \\ \hline
+	\end{tabularx}
+\end{table}
+
+\emph{Luồng thay thế:}
+
+\begin{itemize}
+	\item
+	      \begin{quote}
+	      	Tại bước 3: Thay vì đăng nhập bằng email và mật khẩu, người dùng yêu
+	      	cầu đăng nhập bằng Google, hệ thống điều hướng và mở một trang đăng
+	      	nhập bằng tài khoản Google.
+	      \end{quote}
+\end{itemize}
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+	\item
+	      \begin{quote}
+	      	Tại bước 3: Người dùng điền thiếu hoặc sai thông tin, hệ thống yêu cầu
+	      	nhập lại.
+	      \end{quote}
+	\item
+	      \begin{quote}
+	      	Tại bước 4: Hệ thống kiểm định thông tin đăng nhập sai, hệ thống hiển
+	      	thị thông tin lỗi, yêu cầu nhập lại. Người dùng có thể tiếp tục lặp
+	      	lại luồng sự kiện hoặc thoát khỏi trang đăng nhập.
+	      \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng đã có tài khoản trong hệ thống.
+
+\subsubsection*{Điều kiện đầu}
+
+Không có.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã được đăng nhập vào hệ thống,
+ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng thực hiện thay đổi mật khẩu tài khoản cá nhân.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng bắt đầu khi người dùng đã đăng nhập thành
+công và muốn thay đổi mật khẩu.
+
+\emph{Luồng thay thế:} Không có
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng nhập sai / thiếu thông tin hoặc mật khẩu mới
+  không đáp ứng yêu cầu, hệ thống yêu cầu nhập lại.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 4: Hệ thống kiểm định thông tin sai / thiếu hoặc mật khẩu mới
+  không đáp ứng yêu cầu, hệ thống yêu cầu nhập lại. Người dùng có thể
+  tiếp tục lặp lại luồng sự kiện hoặc thoát khỏi trang hiện tại.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Không có.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập và hệ thống và yêu cầu thay đổi mật khẩu.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã thay đổi được mật khẩu, ngược
+lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Đặt lại mật khẩu}
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng thực hiện đặt lại mật khẩu.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng bắt đầu khi người dùng muốn đăng nhập vào
+hệ thống nhưng quên mật khẩu.
+
+\emph{Luồng thay thế:} Không có
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng nhập vào email không tồn tại trong hệ thống. Hệ
+  thống yêu cầu nhập lại.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 4: Hệ thống kiểm định email không tồn tại, hệ thống hiển thị
+  thông báo cho người dùng, yêu cầu nhập lại. Người dùng có thể tiếp tục
+  lặp lại luồng sự kiện hoặc thoát khỏi trang đăng nhập.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng đã có tài khoản trong hệ thống.
+
+\subsubsection*{Điều kiện đầu}
+
+Không có.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng có thể thay đổi mật khẩu mới,
+ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Đổi mật khẩu}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng thực hiện thay đổi mật khẩu tài khoản cá nhân.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng bắt đầu khi người dùng đã đăng nhập thành công và muốn thay đổi mật khẩu.
+
+\emph{Luồng thay thế:} Không có
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng nhập sai / thiếu thông tin hoặc mật khẩu mới
+  không đáp ứng yêu cầu, hệ thống yêu cầu nhập lại.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 4: Hệ thống kiểm định thông tin sai / thiếu hoặc mật khẩu mới
+  không đáp ứng yêu cầu, hệ thống yêu cầu nhập lại. Người dùng có thể
+  tiếp tục lặp lại luồng sự kiện hoặc thoát khỏi trang hiện tại.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Không có.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập và hệ thống và yêu cầu thay đổi mật khẩu.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã thay đổi được mật khẩu, ngược
+lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Chỉnh sửa thông tin cá nhân}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng yêu cầu thay đổi các thông tin cá nhân.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng bắt đầu khi người dùng đã đăng nhập thành
+công và muốn thay đổi thông tin cá nhân.
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:} Không có.
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng hệ thống là \textbf{sinh viên, giảng viên, đối tác.}
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập hệ thống và mong muốn thay đổi thông tin cá
+nhân.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã thay đổi được thông tin cá
+nhân.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có
+
+\subsubsection*{Biểu đồ hoạt động}
+
+\subsection{Xem thông tin bài đăng}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng yêu cầu xem thông tin chi tiết bài đăng tuyển dụng.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:} Ca sử dụng bắt đầu khi người dùng đã đăng nhập vào
+hệ thống và muốn xem thông tin bài đăng.
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:} Không có.
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập vào hệ thống và mong muốn xem thông tin bài đăng
+tuyển dụng.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng xem được thông tin có trong bài
+đăng.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Xem quy chế thực tập}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng lần đầu tiên đăng nhập vào hệ thống với tài khoản được cấp,
+một email có nội dung về quy chế thực tập sẽ được gửi đến email người
+dùng.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:} Không có
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 1: Người dùng nhập sai / thiếu thông tin, hệ thống yêu cầu
+  nhập lại.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 2: Hệ thống kiểm định thấy thông tin sai, hệ thống không gửi
+  email, yêu cầu nhập lại. Người dùng có thể tiếp tục lặp lại luồng sự
+  kiện hoặc thoát khỏi trang hiện tại.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên} và lần đăng nhập này là đầu tiên.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đăng nhập thành công vào hệ thống.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng sẽ nhận được email chứa nội dung
+quy chế thực tập.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsubsection*{Biểu đồ hoạt động}
+
+\subsection{Đăng ký thực tập với công ty liên kết}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng đã có nơi thực tập và là công ty đã liên kết với Khoa, mong
+muốn đăng ký thực tập với công ty đó.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng chọn công ty đang ở trạng thái bị từ chối, hệ
+  thống phản hồi thông báo.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 4: Hệ thống kiểm định thấy công ty đã chọn đang ở trạng thái
+  bị từ chối, gửi lại thông báo cho người dùng. Người dùng có thể tiếp
+  tục lặp lại luồng sự kiện hoặc thoát khỏi trang hiện tại.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập thành công và mong muốn đăng ký thực tập tại
+công ty đã liên kết.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã đăng ký thực tập thành công tại
+công ty đã chọn, ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Đăng ký thực tập với công ty ngoài}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng đã có nơi thực tập và là công ty chưa liên kết với Khoa, mong
+muốn đăng ký thực tập tại công ty đó.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng chọn công ty đang ở trạng thái bị từ chối, hệ
+  thống phản hồi thông báo.
+  \end{quote}
+\item
+  \begin{quote}
+  Tại bước 4: Hệ thống kiểm định thấy công ty đã chọn đang ở trạng thái
+  bị từ chối, gửi lại thông báo cho người dùng. Người dùng có thể tiếp
+  tục lặp lại luồng sự kiện hoặc thoát khỏi trang hiện tại.
+  \end{quote}
+\end{itemize}
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng là đã đăng nhập thành công và mong muốn đăng ký thực tập tại
+công ty ngoài đã có trong danh sách.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã đăng ký thực tập thành công tại
+công ty đã chọn, ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Đăng ký phỏng vấn từ bài đăng}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng chưa có nơi thực tập, sau khi đọc bài đăng tuyển dụng trên hệ
+thống, mong muốn đăng ký phỏng vấn thực tập tại các công ty đã đăng bài.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Tại bước 3: Người dùng không xem chi tiết bài đăng, mà yêu cầu đăng ký
+  ngay trực tiếp ở trang chủ danh sách bài đăng.
+  \end{quote}
+\end{itemize}
+
+\emph{Luồng ngoại lệ:} Không có.
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập thành công vào hệ thống và mong muốn đăng ký
+phỏng vấn thực tập sau khi đọc bài đăng tuyển dụng.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã đăng ký phỏng vấn thành công
+tại công ty đã chọn, ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Xem thông tin thực tập}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng mong muốn xem thông tin thực tập của bản thân.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:} Không có.
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập vào hệ thống và mong muốn xem thông tin thực tập
+của bản thân.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, người dùng đã có thể xem thông tin thực tập
+của bản thân, ngược lại, trạng thái hệ thống không thay đổi.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
+
+\subsection{Chọn công ty để thực tập}
+
+\subsubsection*{Mô tả tóm tắt}
+
+Người dùng đã đăng ký thực tập thành công hoặc phỏng vấn đạt thì sau khi
+kết thúc thời gian đăng ký, người dùng chọn một công ty duy nhất mà mình
+đang và sẽ thực tập tại đó.
+
+\subsubsection*{Luồng sự kiện}
+
+\emph{Luồng chính:}
+
+\emph{Luồng thay thế:} Không có.
+
+\emph{Luồng ngoại lệ:} Không có.
+
+\subsubsection*{Yêu cầu đặc biệt}
+
+Người dùng là \textbf{sinh viên} và đã có ít nhất một công ty đang ở
+trạng thái \emph{PASSED}.
+
+\subsubsection*{Điều kiện đầu}
+
+Người dùng đã đăng nhập, đã truy cập vào trang thông tin thực tập và
+mong muốn chọn một công ty cuối cùng để thực tập tại đó.
+
+\subsubsection*{Điều kiện cuối}
+
+Nếu ca sử dụng thành công, trạng thái thực tập của người dùng đã được
+thay đổi và hiển thị ngay trên trang thông tin thực tập.
+
+\subsubsection*{Các vấn đề mở}
+
+Không có.
 
 \end{document}
