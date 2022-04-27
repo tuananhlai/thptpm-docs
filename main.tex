@@ -54,8 +54,6 @@
 \tableofcontents
 \clearpage
 
-\listoffigures
-
 % Sub file must require this
 % \documentclass[./../main_file.tex]{subfiles}
 
@@ -74,6 +72,10 @@ Vì kiến thức bản thân còn hạn chế, trong quá trình thực tập, 
 
 Em xin cam đoan kết quả đạt được trong khóa luận là sản phẩm của riêng cá nhân, không sao chép lại của người khác. Trong toàn bộ nội dung của khóa luận, những điều được trình bày hoặc là của cá nhân hoặc là được tổng hợp từ nhiều nguồn tài liệu. Tất cả các tài liệu tham khảo đều có xuất xứ rõ ràng và được trích dẫn hợp pháp. Em xin hoàn toàn chịu trách nhiệm và chịu mọi hình thức kỷ luật theo quy định cho lời cam đoan của mình.
 
+\listoffigures{}
+
+\listoftables{}
+
 \chapter{Giới thiệu \& phân tích yêu cầu}
 \section{Đặt vấn đề}
 \subfile{./sections/section_1.tex}
@@ -82,50 +84,40 @@ Em xin cam đoan kết quả đạt được trong khóa luận là sản phẩm
 \subfile{./sections/section_2.tex}
 
 \chapter{Thiết kế hệ thống}
-\subfile{./sections/section_3.tex}
 
 \section{Kiến thức cơ sở}
+\subfile{./sections/section_3.tex}
 
 \section{Thiết kế hệ thống}
+\subfile{./sections/section_4.tex}
 
 \section{Thiết kế giao diện}
+\subfile{./sections/section_5.tex}
 
-\chapter{Tính năng nổi bật}
+\chapter{Xây dựng và triển khai hệ thống}
 
 \section{Tính năng nổi bật}
-
-\section{Các tính năng trong tương lai}
+\subfile{./sections/section_6.tex}
 
 \section{Kết quả kiểm thử}
+\subfile{./sections/section_7.tex}
 
 \section{Triển khai và kết quả thực nghiệm}
+\subfile{./sections/section_8.tex}
 
-\chapter{Kết luận}
+\chapter{Kết luận và định hướng phát triển}
 
-\chapter{Phụ lục và chú giải}
+\section{Kết luận}
+\subfile{./sections/section_9.tex}
 
-% \section{Phân tích yêu cầu}
-% \subfile{./sections/section_3.tex}
+\section{Định hướng phát triển}
 
-% \section{Thiết kế hệ thống}
-% \subfile{./sections/section_4.tex}
+\nocite{*}
+\printbibliography[heading=bibintoc, title=Tài liệu tham khảo]
 
-% \section{Thiết kế giao diện}
-% \subfile{./sections/section_5.tex}
+\chapter*{Từ điển chú giải}
 
-% \section{Tính năng nổi bật}
-% \subfile{./sections/section_6.tex}
-
-% \section{Các tính năng trong tương lai}
-% \subfile{./sections/section_7.tex}
-
-% \section{Triển khai}
-% \subfile{./sections/section_8.tex}
-
-% \section{Tổng kết}
-% \subfile{./sections/section_9.tex}
-
-\citation{}
+% \citation{}
 
 % \section{Tài liệu tham khảo}
 % \nocite{*}

@@ -3,6 +3,172 @@
 
 \begin{document}
 
+Phần này sẽ mô tả ngắn gọn về các công nghệ được sử dụng trong quá trình
+phát triển sản phẩm.
 
+\hypertarget{kiux1ebfn-truxfac-microservice}{%
+\subsection{Kiến trúc
+Microservice}\label{kiux1ebfn-truxfac-microservice}}
+
+Kiến trúc Microservice là kiến trúc mà các thành phần của hệ thống được
+phân tách thành các service con chạy độc lập với nhau.
+
+Ưu điểm của kiến trúc này là độ tin cậy và khả năng mở rộng của hệ thống
+sẽ được tăng lên do lỗi của một service sẽ không ảnh hưởng đến những
+service còn lại. Hơn nữa, do mã nguồn trong 1 service có liên quan chặt
+chẽ đến nhau, code trong một service sẽ đơn giản và dễ bảo trì hơn.
+
+Nhược điểm của kiến trúc này là độ phức tạp của cả hệ thống sẽ tăng lên.
+Thay vì sử dụng các hàm local, service phải giao tiếp với nhau bằng một
+giao thức khác (như TCP) hoặc bằng một hệ thống truyền tin (như Kafka,
+RabbitMQ, \ldots). Hơn nữa, mức sử dụng tài nguyên của hệ thống cũng
+tăng lên do các service cần những hệ thống bổ trợ.
+
+\hypertarget{nodejs-vuxe0-nestjs}{%
+\subsection{NodeJS và NestJS}\label{nodejs-vuxe0-nestjs}}
+
+NodeJS là một nền tảng được xây dựng dựa trên V8 Javascript Engine của
+Google. Nền tảng này cho phép nhà phát triển tận dụng được sự phổ biến
+và linh hoạt của JavaScript để phát triển ứng dụng backend.
+
+NodeJS có thể chạy trên nhiều nền tảng khác nhau như Windows, Linux và
+Mac OS. Ngoài ra, kiến trúc hướng sự kiện và cơ chế non-blocking I/O của
+NodeJS giúp ứng dụng thực thi nhanh và hiệu quả hơn.
+
+NestJS là một framework để phát triển ứng dụng backend bằng NodeJS.
+NestJS đem lại nhiều ưu điểm so với NodeJS thuần như:
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Hỗ trợ tốt cho TypeScript, một phiên bản nâng cao của JavaScript với
+  hỗ trợ cho kiểu dữ liệu tĩnh và các lớp hướng đối tượng.
+  \end{quote}
+\item
+  \begin{quote}
+  Áp dụng nguyên lý Dependency Injection để nâng cao hiệu năng và giảm
+  lượng tài nguyên sử dụng.
+  \end{quote}
+\item
+  \begin{quote}
+  Cung cấp các công cụ để phát triển ứng dụng theo mô hình hướng đối
+  tượng.
+  \end{quote}
+\end{itemize}
+
+\hypertarget{grpc}{%
+\subsection{gRPC}\label{grpc}}
+
+gRPC là một giao thức hiện đại, được phát triển bởi Google để cho phép
+server backend giao tiếp với nhau. gRPC sử dụng HTTP/2 cùng với Protobuf
+để encode dữ liệu nhỏ nhất có thể, giúp giảm thời gian truyền tải của
+payload. Do vậy, gRPC rất phổ biến với mô hình microservice.
+
+\hypertarget{kafka}{%
+\subsection{Kafka}\label{kafka}}
+
+Kafka là một hệ thống truyền tin theo hướng publish-subscribe phân tán.
+Bên public dữ liệu được gọi là \emph{producer}, bên subscribe gọi là
+\emph{consumer}.
+
+Kafka có khả năng truyền một lượng lớn message theo thời gian thực và có
+thể đảm bảo consumer sẽ nhận được message ít nhất 1 lần (at-least-one
+guarantee).
+
+Khác với hệ thống truyền tin khác, Kafka lưu tất cả message ở trong đĩa
+thay vì trong bộ nhớ, giúp cho message không bị mất khi server xảy ra
+lỗi. Hơn nữa, người dùng có thể cài đặt time-to-live chơ những message
+này để tiết kiệm không gian lưu trữ.
+
+Kafka thường được sử dụng như một phương thức giao tiếp giữa các service
+trong kiến trúc microservice. Ngoài ra, người dùng có thể tận dụng các
+plugin của Kafka để giải quyết các vấn đề như nhân bản dữ liệu, \ldots{}
+
+\hypertarget{debezium}{%
+\subsection{Debezium}\label{debezium}}
+
+Debezium là một Kafka Connector có nhiệm vụ đọc và chuyển hóa log của cơ
+sở dữ liệu thành các Kafka Message và gửi chúng vào Kafka. Debezium
+thường được sử dụng để nhân bản dữ liệu từ các nguồn khác nhau.
+
+\hypertarget{minio}{%
+\subsection{MinIO}\label{minio}}
+
+MinIO là một object storage server mã nguồn mở và implement public API
+của Amazon S3. MinIO có thể được cài đặt để lưu trữ file trong các
+khoảng thời gian khác nhau, tùy vào nhu cầu của người sử dụng.
+
+\hypertarget{docker}{%
+\subsection{Docker}\label{docker}}
+
+Docker là nền tảng phần mềm cho phép người dùng dựng, kiểm thử và triển
+khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn
+vị tiêu chuẩn hóa được gọi là \emph{container}.
+
+Một container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện,
+công cụ hệ thống, mã nguồn và thời gian chạy. Bằng cách sử dụng Docker,
+người dùng có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào
+bất kỳ môi trường nào và biết chắc rằng mã nguồn sẽ chạy được. Do những
+đặc điểm này, Docker được sử dụng phổ biến trong các hệ thống với kiến
+trúc Microservice.
+
+\hypertarget{nginx}{%
+\subsection{Nginx}\label{nginx}}
+
+Nginx là một phần mềm web server mã nguồn mở nổi tiếng. Ban đầu nó dùng
+để phục vụ web HTTP. Tuy nhiên, ngày nay nó cũng được dùng làm reverse
+proxy, HTTP load balancer và email proxy như IMAP, POP3, và SMTP.
+
+\hypertarget{certbot}{%
+\subsection{Certbot}\label{certbot}}
+
+Certbot là một công cụ của tổ chức Let's Encrypt để cung cấp và thu hồi
+chứng chỉ SSL/TLS. Bằng việc sử dụng công cụ này kết hợp với web server
+Nginx, người dùng có thể nâng cấp server của mình lên HTTPS một cách dễ
+dàng và nhanh chóng.
+
+\hypertarget{react}{%
+\subsection{React}\label{react}}
+
+React là thư viện JavaScript phổ biến nhất để xây dựng giao diện người
+dùng (UI). Nó cho tốc độ phản hồi tuyệt vời khi user nhập liệu bằng cách
+sử dụng phương pháp mới để render trang web.
+
+Thư viện này được phát triển bởi Facebook. Mã nguồn của React được công
+bố bởi Facebook vào năm 2013. Theo thống kê của StackOverFlow vào năm
+2021, React là thư viện phổ biến nhất với 40.14\% người dùng, cao hơn
+hẳn Angular (22.96\%) và Vue (18.97\%).
+
+\hypertarget{react-material-ui}{%
+\subsection{React Material UI}\label{react-material-ui}}
+
+React Material UI là một thư viện component của React, được thiết kế
+theo chuẩn Material Design của Google. Thư viện này cung cấp cho người
+dùng một tập các thành phần giao diện hoàn chỉnh, giúp đẩy nhanh tiến độ
+phát triển ứng dụng. Hơn nữa, Material UI cho phép người dùng tinh chỉnh
+lại chủ đề, màu sắc, phông chữ của các thành phần để tạo ra một thiết kế
+độc đáo của riêng mình.
+
+\hypertarget{tuxedch-hux1ee3p-liuxean-tux1ee5c-cicd}{%
+\subsection{Tích hợp liên tục
+(CI/CD)}\label{tuxedch-hux1ee3p-liuxean-tux1ee5c-cicd}}
+
+\emph{Continuous Integration/Continuous Delivery} hay CI/CD là một
+phương pháp phát triển phần mềm. Phương pháp này đòi hỏi các thành viên
+trong đội cần phải tích hợp công việc và triển khai code thường xuyên.
+Mỗi lần tích hợp, hệ thống sẽ được xây dựng và triển khai một cách tự
+động nhằm mục đích phát hiện ra những lỗi phát sinh một cách nhanh nhất
+có thể.
+
+CI/CD giúp làm giảm những vấn đề về tích hợp và triển khai, cho phép nhà
+phát triển xây dựng phần mềm nhanh và hiệu quả hơn.
+
+\hypertarget{gitlab-cicd}{%
+\subsection{Gitlab CI/CD}\label{gitlab-cicd}}
+
+Gitlab CI/CD là một dịch vụ dành cho việc áp dụng CI/CD vào trong quy
+trình phát triển phần mềm. Dịch vụ này cho phép người dùng định nghĩa
+các bước cần chạy sau khi git commit và cung cấp phần cứng để chạy những
+bước này.
 
 \end{document}
