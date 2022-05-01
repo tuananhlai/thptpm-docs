@@ -9,46 +9,46 @@ Hình \ref{fig:high_level_design} mô tả thiết kế bậc cao của hệ th�
 
 \begin{itemize}
 \item
-  \begin{quote}
+  
   \textbf{Web App}: là ứng dụng web mà người dùng tương tác để hoàn
   thành công việc của mình.
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   \textbf{API Gateway}: nhận yêu cầu HTTP từ client, gửi yêu cầu tới
   những service cần thiết, sau đó tổng hợp lại response để trả lại kết
   quả cho client.
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   \textbf{User Service}: xử lý yêu cầu liên quan đến account và profile
   của người dùng trên hệ thống, bao gồm sinh viên, giảng viên, đối tác,
   \ldots{} cùng với thông tin về các khoa. Service này nhận yêu cầu bằng
   giao thức gRPC và HTTP (cho API upload file).
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   \textbf{Internship Service}: xử lý yêu cầu liên quan đến kỳ thực tập,
   ví dụ như danh sách kỳ thực tập, các sinh viên trong kỳ, \ldots{}
   Service này sẽ replicate lại một số data từ User Service để đảm bảo
   tính đúng đắn và toàn vẹn của dữ liệu. Service này nhận yêu cầu bằng
   giao thức gRPC và HTTP (cho API upload file).
-  \end{quote}
+  
 \end{itemize}
 
 Ngoài 4 thành phần chính ở trên, hệ thống có các thành phần phụ là:
 
 \begin{itemize}
 \item
-  \begin{quote}
+  
   \textbf{Debezium}: đọc bản ghi từ cơ sở dữ liệu của User Service,
   chuyển bản ghi đó thành Kafka message và gửi vào Kafka.
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   \textbf{Internship Service Replicator}: đọc bản ghi của User DB từ
   Kafka và insert vào Internship DB.
-  \end{quote}
+  
 \end{itemize}
 
 \begin{figure}
@@ -241,33 +241,33 @@ Hình \ref{fig:internship_db_design} mô tả thiết kế của Internship DB. 
 
 \begin{itemize}
 \item
-  \begin{quote}
+  
   Bảng students
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng lecturers
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng partners
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng partner\_contacts
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng organizations
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng partner\_organizations
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bảng school\_classes
-  \end{quote}
+  
 \end{itemize}
 
 \begin{figure}
@@ -407,14 +407,14 @@ các bảng có thể nằm trên 2 cơ sở dữ liệu khác nhau.
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \begin{quote}
+  
   Gọi API tới cả 2 service và ghép kết quả trả về thủ công
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Nhân bản data giữa 2 service để giúp service thực hiện query trên 1 cơ
   sở dữ liệu duy nhất
-  \end{quote}
+  
 \end{enumerate}
 
 Ưu điểm của cách 1 là sự phân chia rõ ràng trong nhiệm vụ của từng
@@ -461,18 +461,18 @@ Em đề ra 2 giải pháp cho vấn đề này:
 
 \begin{itemize}
 \item
-  \begin{quote}
+  
   Tạo ra một service mới là Organization Service. Service này sẽ quản lý
   tất cả các khoa trên hệ thống. Dữ liệu của mỗi khoa sẽ được lưu trong
   một cơ sở dữ liệu khác nhau.
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Bổ sung bảng organization vào user service và thêm trường
   \code{organization\_id} cho dữ liệu thuộc 1 khoa. Khi người dùng cần đọc /
   thêm / sửa dữ liệu của 1 khoa, em sẽ kiểm tra quyền sở hữu trước khi
   cho phép thực hiện thao tác đó.
-  \end{quote}
+  
 \end{itemize}
 
 Cách 1 có ưu điểm là dữ liệu được phân tách rõ ràng và người dùng của
@@ -499,17 +499,17 @@ microservice, ta gặp những vấn đề sau:
 
 \begin{itemize}
 \item
-  \begin{quote}
+  
   Dữ liệu nằm trên nhiều service khác nhau, yêu cầu nhà phát triển phía
   client phải nhớ dữ liệu nào nằm trên service nào trước khi gửi yêu
   cầu.
-  \end{quote}
+  
 \item
-  \begin{quote}
+  
   Một số yêu cầu cần dữ liệu nằm trên nhiều service khác nhau, yêu cầu
   nhà phát triển phía client phải gửi yêu cầu tới nhiều service và ghép
   lại một cách thủ công.
-  \end{quote}
+  
 \end{itemize}
 
 Để giải quyết vấn đề này, em đã áp dụng mẫu thiết kế API Gateway. API
