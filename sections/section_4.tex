@@ -32,7 +32,7 @@ Hình \ref{fig:high_level_design} mô tả thiết kế bậc cao của hệ th�
   ví dụ như danh sách kỳ thực tập, các sinh viên trong kỳ, \ldots{}
   Service này sẽ replicate lại một số data từ User Service để đảm bảo
   tính đúng đắn và toàn vẹn của dữ liệu. Service này nhận yêu cầu bằng
-  giao thức gRPC và HTTP (cho API upload file).
+  giao thức gRPC\cite{Goo22} và HTTP (cho API upload file).
   
 \end{itemize}
 
@@ -498,7 +498,7 @@ một cách thủ công như trước.
 
 Hơn nữa, mẫu thiết kế API Gateway cho phép các service giao tiếp với
 nhau một cách tối ưu hơn. Các service trong hệ thống UETWork mới giao
-tiếp với nhau bằng giao thức gRPC thay vì HTTP, giúp giảm tải băng thông
+tiếp với nhau bằng giao thức gRPC\cite{Goo22} thay vì HTTP, giúp giảm tải băng thông
 và độ trễ cho các yêu cầu.
 
 \end{document}
