@@ -415,7 +415,7 @@ Với hệ thống theo kiến trúc monolith, ta có thể phân quyền các r
 cách trực tiếp. Tuy nhiên, với kiến trúc Microservice, việc cài đặt phân
 quyền trong từng service sẽ tăng độ phức tạp lên đáng kể.
 
-Để giải quyết vấn đề này, em quyết định giao nhiệm vụ xác thực cho một
+Để giải quyết vấn đề này, nhiệm vụ xác thực được giao cho một
 service duy nhất. Service này có nhiệm vụ xác thực người dùng và trả về
 token. Sau đó, em bổ sung tính năng phân quyền vào API Gateway để đảm
 bảo người dùng không truy cập trái phép.
@@ -430,10 +430,10 @@ các bên thứ ba cũng không thể gửi request đến service được.
 thống}\label{cho-phuxe9p-nhiux1ec1u-khoa-sux1eed-dux1ee5ng-hux1ec7-thux1ed1ng}}
 
 Hệ thống UETWork mới có nhiệm vụ hỗ trợ sinh viên và admin của nhiều
-khoa. Vì vậy, em cần thiết kế một giải pháp để phân tách dữ liệu của các
+khoa. Vì vậy, một giải pháp cần được thiết kế để phân tách dữ liệu của các
 khoa, đảm bảo rằng các khoa không thể đọc dữ liệu của nhau.
 
-Em đề ra 2 giải pháp cho vấn đề này:
+Vấn đề này có 2 giải pháp sau:
 
 \begin{itemize}
 \item
@@ -488,17 +488,16 @@ microservice, ta gặp những vấn đề sau:
   
 \end{itemize}
 
-Để giải quyết vấn đề này, em đã áp dụng mẫu thiết kế API Gateway. API
-Gateway là một server nằm ở giữa client và service. Khi nhận được yêu
-cầu từ client, API Gateway sẽ gửi các yêu cầu cần thiết đến service, tập
-hợp lại kết quả và gửi về kết quả. Cách làm này giúp đơn giản hóa quá
-trình phát triển phía client. Nhà phát triển giờ đây chỉ cần gọi tới 1
-địa chỉ và hiển thị kết quả, thay vì phải xử lý kết quả từ nhiều service
-một cách thủ công như trước.
+Để giải quyết vấn đề này, hệ thống đã áp dụng mẫu thiết kế API Gateway \cite{Ric22}. API Gateway là một server nằm ở giữa client và service. Khi nhận được yêu cầu từ client, API Gateway sẽ gửi các yêu cầu cần thiết đến service, tập hợp lại kết quả và gửi về kết quả. Cách làm này giúp đơn giản hóa quá trình phát triển phía client. Nhà phát triển giờ đây chỉ cần gọi tới 1 địa chỉ và hiển thị kết quả, thay vì phải xử lý kết quả từ nhiều service một cách thủ công như trước.
 
-Hơn nữa, mẫu thiết kế API Gateway cho phép các service giao tiếp với
-nhau một cách tối ưu hơn. Các service trong hệ thống UETWork mới giao
-tiếp với nhau bằng giao thức gRPC\cite{Goo22} thay vì HTTP, giúp giảm tải băng thông
-và độ trễ cho các yêu cầu.
+Hơn nữa, mẫu thiết kế API Gateway cho phép các service giao tiếp với nhau một cách tối ưu hơn. Các service trong hệ thống UETWork mới giao tiếp với nhau bằng giao thức gRPC thay vì HTTP, giúp giảm tải băng thông và độ trễ cho các yêu cầu.
+
+\subsubsection{Tích hợp dữ liệu từ hệ thống cũ}
+
+Để người dùng của hệ thống UETWork cũ có thể chuyển sang hệ thống mới một cách nhanh và dễ dàng nhất, hệ thống cần cung cấp một giải pháp để migrate dữ liệu từ hệ thống cũ.
+
+Nhằm giải quyết vấn đề này, một công cụ đã được phát triển để xuất dữ liệu từ cơ sở dữ liệu cũ, chuyển dữ liệu sang format của hệ thống mới và lưu vào cơ sở dữ liệu.
+
+Tuy nhiên, cách làm này có nhược điểm là không thể chuyển đổi toàn bộ dữ liệu sang format mới. Do cấu trúc của cơ sở dữ liệu cũ và mới khác nhau, việc chuyển đổi là bất khả thi.
 
 \end{document}
