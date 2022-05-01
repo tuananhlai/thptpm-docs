@@ -63,7 +63,7 @@ Hệ thống UETWork có 2 service chính: User Service và Internship Service. 
 
 \subsubsection{Cơ sở dữ liệu của User Service (User DB)}
 
-Hình \ref{fig:user_db_design} mô tả các bảng và mối quan hệ giữa chúng trong User DB.
+Hình \ref{fig:user_db_design} mô tả các bảng và mối quan hệ giữa chúng trong User DB. Bảng \ref{tab:db_roles} đến \ref{tab:db_partner_orgs} mô tả cụ thể hơn về nội dung từng bảng trong User DB.
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{./images/image3.png}
@@ -71,10 +71,8 @@ Hình \ref{fig:user_db_design} mô tả các bảng và mối quan hệ giữa c
 	\label{fig:user_db_design}
 \end{figure}
 
-Bảng \textbf{roles}: chứa thông tin về các role (vai trò)
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng roles]{Bảng \textbf{roles} - chứa thông tin về các role (vai trò)}
 	\label{tab:db_roles}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -85,10 +83,8 @@ Bảng \textbf{roles}: chứa thông tin về các role (vai trò)
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{users}: chứa thông tin về tài khoản người dùng
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng users]{Bảng \textbf{users} - chứa thông tin về tài khoản người dùng}
 	\label{tab:db_users}
 	\begin{tabularx}{\textwidth}{|l|l|X|}
 	\hline
@@ -105,10 +101,8 @@ Bảng \textbf{users}: chứa thông tin về tài khoản người dùng
 	\end{tabularx}
 \end{table}
 
-Bảng \textbf{organizations}: chứa thông tin về các khoa
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng organizations]{Bảng \textbf{organizations} - chứa thông tin về các khoa}
 	\label{tab:db_organizations}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -120,10 +114,8 @@ Bảng \textbf{organizations}: chứa thông tin về các khoa
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{school\_classes}: chứa thông tin về lớp khóa học
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng school\_classes]{Bảng \textbf{school\_classes} - chứa thông tin về lớp khóa học}
 	\label{tab:db_school_classes}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -134,10 +126,8 @@ Bảng \textbf{school\_classes}: chứa thông tin về lớp khóa học
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{students}: chứa thông tin về profile sinh viên
-
 \begin{table}[H]
-	\caption{Bảng students}
+	\caption[Bảng students]{Bảng \textbf{students} - chứa thông tin về profile sinh viên}
 	\label{tab:db_students}
 	\begin{tabularx}{\textwidth}{|l|l|X|}
 	\hline
@@ -157,10 +147,8 @@ Bảng \textbf{students}: chứa thông tin về profile sinh viên
 	\end{tabularx}%
 \end{table}
 
-Bảng \textbf{lecturers}: chứa thông tin về profile giảng viên
-
 \begin{table}[H]
-	\caption{Bảng lecturers}
+	\caption[Bảng lecturers]{Bảng \textbf{lecturers} - chứa thông tin về profile giảng viên}
 	\label{tab:db_lecturers}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -175,10 +163,8 @@ Bảng \textbf{lecturers}: chứa thông tin về profile giảng viên
 	\end{tabular}%
 \end{table}
 
-Bảng \textbf{partners}: chứa thông tin về profile công ty trong hệ thống
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng partners]{Bảng \textbf{partners} - chứa thông tin về profile công ty trong hệ thống}
 	\label{tab:db_partners}
 	\begin{tabularx}{\textwidth}{|l|l|X|}
 	\hline
@@ -198,10 +184,8 @@ Bảng \textbf{partners}: chứa thông tin về profile công ty trong hệ th�
 	\end{tabularx}
 \end{table}
 
-Bảng \textbf{partner\_contacts}: chứa thông tin về liên hệ của đối tác
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng partner\_contacts]{Bảng \textbf{partner\_contacts} - chứa thông tin về liên hệ của đối tác}
 	\label{tab:db_partner_contacts}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -217,10 +201,8 @@ Bảng \textbf{partner\_contacts}: chứa thông tin về liên hệ của đố
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{partner\_organizations}: chứa trạng thái liên kết giữa công ty và khoa
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng partner\_organizations]{Bảng \textbf{partner\_organizations} - chứa trạng thái liên kết giữa công ty và khoa}
 	\label{tab:db_partner_orgs}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -233,7 +215,7 @@ Bảng \textbf{partner\_organizations}: chứa trạng thái liên kết giữa 
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{migrations}: chứa thông tin liên quan đến migration của cơ sở dữ liệu. Không liên quan tới chức năng của hệ thống
+Bảng \textbf{migrations} chứa thông tin liên quan đến migration của cơ sở dữ liệu. Không liên quan tới chức năng của hệ thống
 
 \subsubsection{Cơ sở dữ liệu của Internship Service}
 
@@ -270,16 +252,16 @@ Hình \ref{fig:internship_db_design} mô tả thiết kế của Internship DB. 
   
 \end{itemize}
 
+Bảng \ref{tab:db_terms} đến \ref{tab:db_posts} mô tả nội dung cụ thể của từng bảng trong cơ sở dữ liệu Internship DB.
+
 \begin{figure}
 	\includegraphics[width=\linewidth]{./images/image1.png}
 	\caption{Lược đồ Internship DB}
 	\label{fig:internship_db_design}
 \end{figure}
 
-Bảng \textbf{internship\_terms}: chứa kỳ thực tập của các khoa
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng internship\_terms]{Bảng \textbf{internship\_terms} - chứa kỳ thực tập của các khoa}
 	\label{tab:db_terms}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -296,10 +278,8 @@ Bảng \textbf{internship\_terms}: chứa kỳ thực tập của các khoa
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{term\_students}: chứa thông tin thực tập của toàn bộ sinh viên
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng term\_students]{Bảng \textbf{term\_students} - chứa thông tin thực tập của toàn bộ sinh viên}
 	\label{tab:db_term_students}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -316,10 +296,10 @@ Bảng \textbf{term\_students}: chứa thông tin thực tập của toàn bộ 
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{term\_lecturers}: chứa thông tin thực tập của giảng viên
+
 
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng term\_lecturers]{Bảng \textbf{term\_lecturers} - chứa thông tin thực tập của giảng viên}
 	\label{tab:db_term_lecturers}
 	\begin{tabular}{|l|l|l|}
 	\hline
@@ -330,10 +310,9 @@ Bảng \textbf{term\_lecturers}: chứa thông tin thực tập của giảng vi
 	\end{tabular}
 \end{table}
 
-Bảng \textbf{term\_partners}: chứa thông tin của công ty trong kỳ thực tập
 
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng term\_partners]{Bảng \textbf{term\_partners} - chứa thông tin của công ty trong kỳ thực tập}
 	\label{tab:db_term_partners}
 	\begin{tabularx}{\textwidth}{|l|X|X|}
 	\hline
@@ -346,10 +325,9 @@ Bảng \textbf{term\_partners}: chứa thông tin của công ty trong kỳ th�
 	\end{tabularx}
 \end{table}
 
-Bảng \textbf{term\_partner\_registrations}: chứa thông tin đăng ký thực tập của sinh viên
 
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng term\_partner\_registrations]{Bảng \textbf{term\_partner\_registrations} - chứa thông tin đăng ký thực tập của sinh viên}
 	\label{tab:db_term_partner_regs}
 	\begin{tabularx}{\textwidth}{|l|X|X|}
 	\hline
@@ -367,10 +345,8 @@ Bảng \textbf{term\_partner\_registrations}: chứa thông tin đăng ký thự
 	\end{tabularx}
 \end{table}
 
-Bảng \textbf{recruitment\_posts}: chứa bài đăng tuyển dụng trong 1 kỳ thực tập
-
 \begin{table}[H]
-	\caption{}
+	\caption[Bảng recruitment\_posts]{Bảng \textbf{recruitment\_posts} - chứa bài đăng tuyển dụng trong 1 kỳ thực tập}
 	\label{tab:db_posts}
 	\begin{tabular}{|l|l|l|}
 	\hline
