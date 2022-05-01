@@ -7,8 +7,7 @@
 \subsection{Kiến trúc
 Microservice}\label{kiux1ebfn-truxfac-microservice}}
 
-Kiến trúc Microservice là kiến trúc mà các thành phần của hệ thống được
-phân tách thành các service con chạy độc lập với nhau.
+Kiến trúc Microservice \cite{Ric22a} là kiến trúc mà các thành phần của hệ thống được phân tách thành các service con chạy độc lập với nhau.
 
 Ưu điểm của kiến trúc này là độ tin cậy và khả năng mở rộng của hệ thống
 sẽ được tăng lên do lỗi của một service sẽ không ảnh hưởng đến những
@@ -24,7 +23,7 @@ tăng lên do các service cần những hệ thống bổ trợ.
 \hypertarget{nodejs-vuxe0-nestjs}{%
 \subsection{NodeJS và NestJS}\label{nodejs-vuxe0-nestjs}}
 
-NodeJS là một nền tảng được xây dựng dựa trên V8 Javascript Engine của
+NodeJS \cite{Dah22} là một nền tảng được xây dựng dựa trên V8 Javascript Engine của
 Google. Nền tảng này cho phép nhà phát triển tận dụng được sự phổ biến
 và linh hoạt của JavaScript để phát triển ứng dụng backend.
 
@@ -32,7 +31,7 @@ NodeJS có thể chạy trên nhiều nền tảng khác nhau như Windows, Linu
 Mac OS. Ngoài ra, kiến trúc hướng sự kiện và cơ chế non-blocking I/O của
 NodeJS giúp ứng dụng thực thi nhanh và hiệu quả hơn.
 
-NestJS là một framework để phát triển ứng dụng backend bằng NodeJS.
+NestJS \cite{Mys22} là một framework để phát triển ứng dụng backend bằng NodeJS.
 NestJS đem lại nhiều ưu điểm so với NodeJS thuần như:
 
 \begin{itemize}
@@ -48,7 +47,7 @@ NestJS đem lại nhiều ưu điểm so với NodeJS thuần như:
 \hypertarget{grpc}{%
 \subsection{gRPC}\label{grpc}}
 
-gRPC là một giao thức hiện đại, được phát triển bởi Google để cho phép
+gRPC \cite{Goo22} là một giao thức hiện đại, được phát triển bởi Google để cho phép
 server backend giao tiếp với nhau. gRPC sử dụng HTTP/2 cùng với Protobuf
 để encode dữ liệu nhỏ nhất có thể, giúp giảm thời gian truyền tải của
 payload. Do vậy, gRPC rất phổ biến với mô hình microservice.
@@ -56,7 +55,7 @@ payload. Do vậy, gRPC rất phổ biến với mô hình microservice.
 \hypertarget{kafka}{%
 \subsection{Kafka}\label{kafka}}
 
-Kafka là một hệ thống truyền tin theo hướng publish-subscribe phân tán.
+Kafka \cite{Kaf22} là một hệ thống truyền tin theo hướng publish-subscribe phân tán.
 Bên public dữ liệu được gọi là \emph{producer}, bên subscribe gọi là
 \emph{consumer}.
 
@@ -76,21 +75,21 @@ plugin của Kafka để giải quyết các vấn đề như nhân bản dữ l
 \hypertarget{debezium}{%
 \subsection{Debezium}\label{debezium}}
 
-Debezium là một Kafka Connector có nhiệm vụ đọc và chuyển hóa log của cơ
+Debezium  \cite{Hat22} là một Kafka Connector có nhiệm vụ đọc và chuyển hóa log của cơ
 sở dữ liệu thành các Kafka Message và gửi chúng vào Kafka. Debezium
 thường được sử dụng để nhân bản dữ liệu từ các nguồn khác nhau.
 
 \hypertarget{minio}{%
 \subsection{MinIO}\label{minio}}
 
-MinIO là một object storage server mã nguồn mở và implement public API
+MinIO \cite{Min22} là một object storage server mã nguồn mở và implement public API
 của Amazon S3. MinIO có thể được cài đặt để lưu trữ file trong các
 khoảng thời gian khác nhau, tùy vào nhu cầu của người sử dụng.
 
 \hypertarget{docker}{%
 \subsection{Docker}\label{docker}}
 
-Docker là nền tảng phần mềm cho phép người dùng dựng, kiểm thử và triển
+Docker \cite{Docker22} là nền tảng phần mềm cho phép người dùng dựng, kiểm thử và triển
 khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn
 vị tiêu chuẩn hóa được gọi là \emph{container}.
 
@@ -104,7 +103,7 @@ trúc Microservice.
 \hypertarget{nginx}{%
 \subsection{Nginx}\label{nginx}}
 
-Nginx là một phần mềm web server mã nguồn mở nổi tiếng. Ban đầu nó dùng
+Nginx \cite{Nginx22} là một phần mềm web server mã nguồn mở nổi tiếng. Ban đầu nó dùng
 để phục vụ web HTTP. Tuy nhiên, ngày nay nó cũng được dùng làm reverse
 proxy, HTTP load balancer và email proxy như IMAP, POP3, và SMTP.
 
@@ -155,7 +154,7 @@ phát triển xây dựng phần mềm nhanh và hiệu quả hơn.
 \hypertarget{gitlab-cicd}{%
 \subsection{Gitlab CI/CD}\label{gitlab-cicd}}
 
-Gitlab CI/CD là một dịch vụ dành cho việc áp dụng CI/CD vào trong quy
+Gitlab CI/CD \cite{Git22} là một dịch vụ dành cho việc áp dụng CI/CD vào trong quy
 trình phát triển phần mềm. Dịch vụ này cho phép người dùng định nghĩa
 các bước cần chạy sau khi git commit và cung cấp phần cứng để chạy những
 bước này.
