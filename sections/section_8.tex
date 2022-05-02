@@ -7,7 +7,7 @@ Phần này mô tả sản phẩm cuối sau quá trình phát triển của em,
 hình ảnh của giao diện người dùng thuộc phần client. Phần giao diện
 người dùng sẽ được bạn Phạm Thị Dân mô tả kỹ hơn ở một báo cáo khác.
 
-\subsection{Màn hình đăng nhập}
+\subsection{Luồng đăng nhập}
 
 Người dùng điền thông tin tài khoản và mật khẩu, hoặc lựa chọn đăng nhập
 bằng Google để đăng nhập vào hệ thống. Hệ thống sẽ dựa vào vai trò của
@@ -18,92 +18,183 @@ Hình \ref{fig:login_page} mô tả màn hình đăng nhập của hệ thống.
 
 \begin{figure}[]
 	\includegraphics[width=\linewidth]{./images/image5.png}
-	\caption{Màn hình đăng nhập}
+	\caption{Luồng hình đăng nhập}
 	\label{fig:login_page}
 \end{figure}
 
-\subsection{Màn hình của sinh viên}
+\subsection{Luồng sử dụng của sinh viên}
 
-Nếu người dùng là \textbf{sinh viên}, hệ thống sẽ hiển thị màn hình
-trang chủ của sinh viên. Tại đây, sinh viên có thể đăng ký thực tập tại
-một công ty hoặc đọc các bài đăng tuyển dụng và đăng ký phỏng vấn. Ngoài
-ra, tại trang \emph{Thông tin thực tập} và \emph{Trang thông tin cá
-nhân}, người dùng có thể xem và chỉnh sửa các thông tin liên quan.
+\paragraph*{Sinh viên đăng ký thực tập}
 
-Hình \ref{fig:student_page} mô tả màn hình trang chủ của sinh viên.
+Tại màn hình trang chủ, sinh viên tìm kiếm công ty mà mình đang thực tập và đăng ký. Sau khi đăng ký thành công thì hệ thống sẽ thông báo lại như hình.
+
+Hình \ref{fig:student_page} mô tả màn hình đăng ký thực tập của sinh viên.
+
+\paragraph*{Sinh viên xem thông tin thực tập}
+Sau khi đăng ký thực tập thành công, sinh viên vào kiểm tra thông tin thực tập của bản thân. Tại đây, sinh viên có thể xem thông tin công ty thực tập đã đúng chưa,  giảng viên hướng dẫn là ai, và nộp báo cáo.
+
+Hình \ref{fig:view_internship_page} mô tả màn hình trang thông tin thực tập.
 
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image7.png}
-	\caption{Màn hình trang chủ của sinh viên}
+	\includegraphics[width=\linewidth]{./images/image15.png}
+	\caption{Sinh viên đăng ký thực tập}
 	\label{fig:student_page}
 \end{figure}
 
-\subsection{Màn hình của giảng viên}
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image17.png}
+	\caption{Sinh viên xem thông tin thực tập}
+	\label{fig:view_internship_page}
+\end{figure}
 
-% \includegraphics[width=6.5in,height=3.72222in]{vertopal_840b8d8141ff4800a3d2d1a844259cf5/media/image16.png}
+\subsection{Luồng sử dụng của giảng viên}
 
-Nếu người dùng là \textbf{giảng viên}, hệ thống sẽ hiển thị màn hình
-trang chủ của giảng viên. Tại trang \emph{Sinh viên đang hướng dẫn},
-giảng viên có thể xem, tìm kiếm, lọc ra danh sách các sinh viên đã nộp
-báo cáo hay chưa, đã được chấm điểm hay chưa, và có thể thêm điểm cho
-sinh viên.
+\paragraph*{Đọc báo cáo và chấm điểm cho sinh viên}
 
-Hình \ref{fig:working_student_page} mô tả màn hình danh sách sinh viên đang thực tập của đối tác.
+Tại đây, giảng viên tải xuống file báo cáo của sinh viên. Sau khi đọc và cho điểm xong, giảng viên thực hiện \emph{Thêm điểm} cho sinh viên.
+
+Hình \ref{fig:working_student_page} mô tả màn hình danh sách sinh viên đang hướng dẫn.
 
 \begin{figure}[]
 	\includegraphics[width=\linewidth]{./images/image8.png}
-	\caption{Màn hình danh sách sinh viên đang thực tập}
+	\caption{Màn hình danh sách sinh viên đang hướng dẫn}
 	\label{fig:working_student_page}
 \end{figure}
 
-\subsection{Màn hình của đối tác}
+\subsection{Luồng sử dụng của đối tác}
 
-% \includegraphics[width=6.5in,height=3.70833in]{vertopal_840b8d8141ff4800a3d2d1a844259cf5/media/image19.png}
+\paragraph*{Thêm bài đăng tuyển dụng}
 
-Nếu người dùng là \textbf{đối tác}, hệ thống sẽ hiển thị màn hình trang
-chủ của đối tác. Tại trang \emph{Sinh viên đang thực tập} và \emph{Yêu
-cầu đăng ký thực tập,} đối tác có thể xem, lọc, tìm kiếm danh sách sinh
-viên, chấp nhận / từ chối yêu cầu thực tập của sinh viên.
-
-% \includegraphics[width=6.5in,height=3.65278in]{vertopal_840b8d8141ff4800a3d2d1a844259cf5/media/image1.png}
-
-Tại trang \emph{Thêm bài đăng}, đối tác có thể tạo bài đăng rồi đăng lên
-hệ thống để tuyển dụng sinh viên thực tập.
+Tại trang Thêm bài đăng, đối tác thêm tiêu đề, nội dung chi tiết, số lượng tuyển dụng, ngày bắt đầu, ngày kết thúc, người liên hệ để tạo một bài đăng mới.
 
 Hình \ref{fig:add_post_page} mô tả màn hình thêm bài đăng của đối tác.
 
+\paragraph*{Chấp nhận / Từ chối yêu cầu thực tập}
+
+Sau khi có các sinh viên đăng ký thực tập tại công ty, đối tác có thể vào trang Yêu cầu đăng ký thực tập để chấp nhận hoặc từ chối yêu cầu của sinh viên.
+
+Hình \ref{fig:approve_or_reject_request} mô tả màn hình chấp nhận / từ chối yêu cầu thực tập.
+
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image9.png}
+	\includegraphics[width=\linewidth]{./images/image18.png}
 	\caption{Màn hình thêm bài đăng mới}
 	\label{fig:add_post_page}
 \end{figure}
 
-\subsection{Màn hình của quản trị viên Khoa}
-
-% \includegraphics[width=6.5in,height=3.31944in]{vertopal_840b8d8141ff4800a3d2d1a844259cf5/media/image15.png}
-
-Nếu người dùng là \textbf{quản trị viên Khoa}, hệ thống sẽ hiển thị màn
-hình trang chủ của quản trị viên Khoa. Tại danh mục \emph{Kỳ thực tập,}
-quản trị viên Khoa có thể thực hiện các thao tác quản lý \emph{Danh sách
-kỳ thực tập, Bài đăng, Yêu cầu thực tập, Sinh viên, Đơn vị thực tập,
-Giảng viên theo kỳ thực tập.} Hình \ref{fig:terms_page} mô tả màn hình danh sách kỳ thực tập của quản trị viên khoa.
-
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image10.png}
-	\caption{Màn hình danh sách kỳ thực tập}
-	\label{fig:terms_page}
+	\includegraphics[width=\linewidth]{./images/image29.png}
+	\caption{Màn hình chấp nhận / từ chối yêu cầu thực tập }
+	\label{fig:approve_or_reject_request}
 \end{figure}
 
-% \includegraphics[width=6.5in,height=3.31944in]{vertopal_840b8d8141ff4800a3d2d1a844259cf5/media/image2.png}
+\subsection{Luồng sử dụng của quản trị viên Khoa}
 
-Tại danh mục \emph{Người dùng,} quản trị viên Khoa có thể thực hiện các
-thao tác quản lý thông tin cá nhân của danh sách \emph{Sinh viên, Đơn vị
-thực tập, Giảng viên} tại Khoa của mình. Hình \ref{fig:list_student_page} mô tả màn hình danh sách sinh viên của quản trị viên khoa.
+\paragraph*{Tạo kỳ thực tập mới}
+
+Quản trị viên Khoa tạo một kỳ thực tập mới, các thông tin bao gồm năm, kỳ, ngày bắt đầu, ngày kết thúc, ngày bắt đầu đăng ký, ngày kết thúc đăng ký.
+
+Hình \ref{fig:add_term_page} mô tả màn hình tạo kỳ thực tập mới.
+
+\paragraph*{Tạo kỳ thực tập thành công}
+
+Sau khi tạo thành công, hệ thống phản hồi lại thông báo và cập nhật danh sách các kỳ thực tập.
+
+Hình \ref{fig:add_term_success} mô tả màn hình tạo kỳ thực tập mới thành công.
+
+\paragraph*{Gán giảng viên cho sinh viên}
+
+Sau khi sinh viên đã chốt nơi thực tập, quản trị viên chọn các sinh viên rồi thực hiện gán giảng viên.
+
+Hình \ref{fig:assign_lecturer} mô tả màn hình gán giảng viên cho sinh viên.
+
+\paragraph*{Chấp nhận / Từ chối công ty}
+
+Quản trị viên chọn một công ty đang ở chế độ Pending và thực hiện chấp nhận hay từ chối công ty.
+
+Hình \ref{fig:reject_or_approve_company} mô tả màn hình Chấp nhận / Từ chối công ty.
 
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image11.png}
-	\caption{Màn hình danh sách sinh viên}
-	\label{fig:list_student_page}
+	\includegraphics[width=\linewidth]{./images/image19.png}
+	\caption{Màn hình tạo kỳ thực tập mới}
+	\label{fig:add_term_page}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image20.png}
+	\caption{Màn hình tạo kỳ thực tập mới thành công}
+	\label{fig:add_term_success}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image22.png}
+	\caption{Màn hình gán giảng viên cho sinh viên}
+	\label{fig:assign_lecturer}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image21.png}
+	\caption{Màn hình Chấp nhận / Từ chối công ty}
+	\label{fig:reject_or_approve_company}
+\end{figure}
+
+\subsection{Luồng sử dụng của quản trị viên hệ thống}
+
+\paragraph*{Tạo Khoa mới}
+
+Quản trị viên thực hiện tạo Khoa mới gồm có: tên khoa, email quản trị viên Khoa.
+
+Hình \ref{fig:add_org} mô tả màn hình tạo Khoa mới.
+
+\paragraph*{Tạo Khoa mới thành công}
+
+Sau khi tạo thành công, một email được gửi đến hòm thư cung cấp mật khẩu cho quản trị viên Khoa.
+
+% Hình \ref{fig:add_org_success} mô tả màn hình hòm thư sau khi tạo Khoa mới thành công.
+
+\paragraph*{Tạo Lớp mới}
+
+Quản trị viên thực hiện tạo lớp mới gồm các thông tin: tên lớp, chương trình giảng dạy.
+
+Hình \ref{fig:add_class} mô tả màn hình tạo Lớp mới.
+
+\paragraph*{Nhập vào Danh sách sinh viên}
+
+Từ màn hình Sinh viên, quản trị viên chọn chức năng Nhập danh sách từ file excel để tải lên danh sách sinh viên của hệ thống.
+
+Hình \ref{fig:choose_file} mô tả màn hình chọn file Danh sách sinh viên.
+
+Sau khi chọn xong tệp, dữ liệu ở trong file được hiển thị lại trên màn hình. Quản trị viên chọn chức năng Tải lên để tải lên danh sách sinh viên.
+
+Hình \ref{fig:upload_list} mô tả màn hình tải lên file Danh sách sinh viên.
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image23.png}
+	\caption{Màn hình tạo Khoa mới}
+	\label{fig:add_org}
+\end{figure}
+
+% \begin{figure}[]
+% 	\includegraphics[width=\linewidth]{./images/image23.png} %TODO: replace image
+% 	\caption{Màn hình hòm thư sau khi tạo Khoa mới thành côngg}
+% 	\label{fig:add_org_success}
+% \end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image25.png}
+	\caption{Màn hình tạo Lớp mới}
+	\label{fig:add_class}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image27.png}
+	\caption{Màn hình chọn file Danh sách sinh viên}
+	\label{fig:choose_file}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image28.png}
+	\caption{Màn hình tải lên file Danh sách sinh viên}
+	\label{fig:upload_list}
 \end{figure}
 
 \end{document}
