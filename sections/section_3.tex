@@ -3,117 +3,137 @@
 
 \begin{document}
 
-\hypertarget{kiux1ebfn-truxfac-microservice}{%
-\subsection{Kiến trúc
-Microservice}\label{kiux1ebfn-truxfac-microservice}}
+% \hypertarget{kiux1ebfn-truxfac-microservice}{%
+% \subsection{Kiến trúc
+% Microservice}\label{kiux1ebfn-truxfac-microservice}}
 
-Kiến trúc Microservice \cite{Ric22a} là kiến trúc mà các thành phần của hệ thống được phân tách thành các service con chạy độc lập với nhau.
+% Kiến trúc Microservice \cite{Ric22a} là kiến trúc mà các thành phần của hệ thống được phân tách thành các service con chạy độc lập với nhau.
 
-Ưu điểm của kiến trúc này là độ tin cậy và khả năng mở rộng của hệ thống
-sẽ được tăng lên do lỗi của một service sẽ không ảnh hưởng đến những
-service còn lại. Hơn nữa, do mã nguồn trong 1 service có liên quan chặt
-chẽ đến nhau, code trong một service sẽ đơn giản và dễ bảo trì hơn.
+% Ưu điểm của kiến trúc này là độ tin cậy và khả năng mở rộng của hệ thống
+% sẽ được tăng lên do lỗi của một service sẽ không ảnh hưởng đến những
+% service còn lại. Hơn nữa, do mã nguồn trong 1 service có liên quan chặt
+% chẽ đến nhau, code trong một service sẽ đơn giản và dễ bảo trì hơn.
 
-Nhược điểm của kiến trúc này là độ phức tạp của cả hệ thống sẽ tăng lên.
-Thay vì sử dụng các hàm local, service phải giao tiếp với nhau bằng một
-giao thức khác (như TCP) hoặc bằng một hệ thống truyền tin (như Kafka,
-RabbitMQ, \ldots). Hơn nữa, mức sử dụng tài nguyên của hệ thống cũng
-tăng lên do các service cần những hệ thống bổ trợ.
+% Nhược điểm của kiến trúc này là độ phức tạp của cả hệ thống sẽ tăng lên.
+% Thay vì sử dụng các hàm local, service phải giao tiếp với nhau bằng một
+% giao thức khác (như TCP) hoặc bằng một hệ thống truyền tin (như Kafka,
+% RabbitMQ, \ldots). Hơn nữa, mức sử dụng tài nguyên của hệ thống cũng
+% tăng lên do các service cần những hệ thống bổ trợ.
 
-\hypertarget{nodejs-vuxe0-nestjs}{%
-\subsection{NodeJS và NestJS}\label{nodejs-vuxe0-nestjs}}
+% \hypertarget{nodejs-vuxe0-nestjs}{%
+% \subsection{NodeJS và NestJS}\label{nodejs-vuxe0-nestjs}}
 
-NodeJS \cite{Dah22} là một nền tảng được xây dựng dựa trên V8 Javascript Engine của
-Google. Nền tảng này cho phép nhà phát triển tận dụng được sự phổ biến
-và linh hoạt của JavaScript để phát triển ứng dụng backend.
+% NodeJS \cite{Dah22} là một nền tảng được xây dựng dựa trên V8 Javascript Engine của
+% Google. Nền tảng này cho phép nhà phát triển tận dụng được sự phổ biến
+% và linh hoạt của JavaScript để phát triển ứng dụng backend.
 
-NodeJS có thể chạy trên nhiều nền tảng khác nhau như Windows, Linux và
-Mac OS. Ngoài ra, kiến trúc hướng sự kiện và cơ chế non-blocking I/O của
-NodeJS giúp ứng dụng thực thi nhanh và hiệu quả hơn.
+% NodeJS có thể chạy trên nhiều nền tảng khác nhau như Windows, Linux và
+% Mac OS. Ngoài ra, kiến trúc hướng sự kiện và cơ chế non-blocking I/O của
+% NodeJS giúp ứng dụng thực thi nhanh và hiệu quả hơn.
 
-NestJS \cite{Mys22} là một framework để phát triển ứng dụng backend bằng NodeJS.
-NestJS đem lại nhiều ưu điểm so với NodeJS thuần như:
+% NestJS \cite{Mys22} là một framework để phát triển ứng dụng backend bằng NodeJS.
+% NestJS đem lại nhiều ưu điểm so với NodeJS thuần như:
+
+% \begin{itemize}
+% \item Sử dụng TypeScript, một phiên bản nâng cao của JavaScript vớihỗ trợ cho kiểu dữ liệu tĩnh và các lớp hướng đối tượng.
+% \item
+%   Áp dụng nguyên lý Dependency Injection để nâng cao hiệu năng và giảm
+%   lượng tài nguyên sử dụng.
+% \item
+%   Cung cấp các công cụ để phát triển ứng dụng theo mô hình hướng đối
+%   tượng.
+% \end{itemize}
+
+% \hypertarget{grpc}{%
+% \subsection{gRPC}\label{grpc}}
+
+% gRPC \cite{Goo22} là một giao thức hiện đại, được phát triển bởi Google để cho phép
+% server backend giao tiếp với nhau. gRPC sử dụng HTTP/2 cùng với Protobuf
+% để encode dữ liệu nhỏ nhất có thể, giúp giảm thời gian truyền tải của
+% payload. Do vậy, gRPC rất phổ biến với mô hình microservice.
+
+% \hypertarget{kafka}{%
+% \subsection{Kafka}\label{kafka}}
+
+% Kafka \cite{Kaf22} là một hệ thống truyền tin theo hướng publish-subscribe phân tán.
+% Bên public dữ liệu được gọi là \emph{producer}, bên subscribe gọi là
+% \emph{consumer}.
+
+% Kafka có khả năng truyền một lượng lớn message theo thời gian thực và có
+% thể đảm bảo consumer sẽ nhận được message ít nhất 1 lần (at-least-one
+% guarantee).
+
+% Khác với hệ thống truyền tin khác, Kafka lưu tất cả message ở trong đĩa
+% thay vì trong bộ nhớ, giúp cho message không bị mất khi server xảy ra
+% lỗi. Hơn nữa, người dùng có thể cài đặt time-to-live chơ những message
+% này để tiết kiệm không gian lưu trữ.
+
+% Kafka thường được sử dụng như một phương thức giao tiếp giữa các service
+% trong kiến trúc microservice. Ngoài ra, người dùng có thể tận dụng các
+% plugin của Kafka để giải quyết các vấn đề như nhân bản dữ liệu, \ldots{}
+
+% \hypertarget{debezium}{%
+% \subsection{Debezium}\label{debezium}}
+
+% Debezium  \cite{Hat22} là một Kafka Connector có nhiệm vụ đọc và chuyển hóa log của cơ
+% sở dữ liệu thành các Kafka Message và gửi chúng vào Kafka. Debezium
+% thường được sử dụng để nhân bản dữ liệu từ các nguồn khác nhau.
+
+% \hypertarget{minio}{%
+% \subsection{MinIO}\label{minio}}
+
+% MinIO \cite{Min22} là một object storage server mã nguồn mở và implement public API
+% của Amazon S3. MinIO có thể được cài đặt để lưu trữ file trong các
+% khoảng thời gian khác nhau, tùy vào nhu cầu của người sử dụng.
+
+% \hypertarget{docker}{%
+% \subsection{Docker}\label{docker}}
+
+% Docker \cite{Docker22} là nền tảng phần mềm cho phép người dùng dựng, kiểm thử và triển
+% khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn
+% vị tiêu chuẩn hóa được gọi là \emph{container}.
+
+% Một container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện,
+% công cụ hệ thống, mã nguồn và thời gian chạy. Bằng cách sử dụng Docker,
+% người dùng có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào
+% bất kỳ môi trường nào và biết chắc rằng mã nguồn sẽ chạy được. Do những
+% đặc điểm này, Docker được sử dụng phổ biến trong các hệ thống với kiến
+% trúc Microservice.
+
+% \hypertarget{nginx}{%
+% \subsection{Nginx}\label{nginx}}
+
+% Nginx \cite{Nginx22} là một phần mềm web server mã nguồn mở nổi tiếng. Ban đầu nó dùng
+% để phục vụ web HTTP. Tuy nhiên, ngày nay nó cũng được dùng làm reverse
+% proxy, HTTP load balancer và email proxy như IMAP, POP3, và SMTP.
+
+% \hypertarget{certbot}{%
+% \subsection{Certbot}\label{certbot}}
+
+% Certbot là một công cụ của tổ chức Let's Encrypt để cung cấp và thu hồi
+% chứng chỉ SSL/TLS. Bằng việc sử dụng công cụ này kết hợp với web server
+% Nginx, người dùng có thể nâng cấp server của mình lên HTTPS một cách dễ
+% dàng và nhanh chóng.
+
+\hypertarget{typescript}{%
+\subsection{Typescript}\label{typescript}}
+
+Typescript là một ngôn ngữ lập trình hướng đối tượng, một phiên bản cao hơn của Javascript, và được phát triển bởi Microsoft.
+
+Bên cạnh các tính năng dùng để phát triển ứng dụng web  giống như Javascript, thì Typescript còn có một vài ưu điểm như:
 
 \begin{itemize}
-\item Sử dụng TypeScript, một phiên bản nâng cao của JavaScript vớihỗ trợ cho kiểu dữ liệu tĩnh và các lớp hướng đối tượng.
-\item
-  Áp dụng nguyên lý Dependency Injection để nâng cao hiệu năng và giảm
-  lượng tài nguyên sử dụng.
-\item
-  Cung cấp các công cụ để phát triển ứng dụng theo mô hình hướng đối
-  tượng.
+  \item
+    
+  Static typing của Typescript hỗ trợ khai báo kiểu cho biến, và trình biên dịch sẽ giảm được tỷ lệ gán sai kiểu của các giá trị.
+    
+  \item
+  Interface trong Typescript sẽ đảm bảo đối tượng đi đôi với một cấu trúc nhất định, tránh sai sót dữ liệu.
+    
+  \item
+  Cách tổ chức code rõ ràng, hỗ trợ cơ chế module hóa, hỗ trợ namespace, giúp phát triển các hệ thống lớn nơi mà nhiều lập trình viên có thể làm việc cùng nhau một cách dễ dàng hơn.
+
 \end{itemize}
-
-\hypertarget{grpc}{%
-\subsection{gRPC}\label{grpc}}
-
-gRPC \cite{Goo22} là một giao thức hiện đại, được phát triển bởi Google để cho phép
-server backend giao tiếp với nhau. gRPC sử dụng HTTP/2 cùng với Protobuf
-để encode dữ liệu nhỏ nhất có thể, giúp giảm thời gian truyền tải của
-payload. Do vậy, gRPC rất phổ biến với mô hình microservice.
-
-\hypertarget{kafka}{%
-\subsection{Kafka}\label{kafka}}
-
-Kafka \cite{Kaf22} là một hệ thống truyền tin theo hướng publish-subscribe phân tán.
-Bên public dữ liệu được gọi là \emph{producer}, bên subscribe gọi là
-\emph{consumer}.
-
-Kafka có khả năng truyền một lượng lớn message theo thời gian thực và có
-thể đảm bảo consumer sẽ nhận được message ít nhất 1 lần (at-least-one
-guarantee).
-
-Khác với hệ thống truyền tin khác, Kafka lưu tất cả message ở trong đĩa
-thay vì trong bộ nhớ, giúp cho message không bị mất khi server xảy ra
-lỗi. Hơn nữa, người dùng có thể cài đặt time-to-live chơ những message
-này để tiết kiệm không gian lưu trữ.
-
-Kafka thường được sử dụng như một phương thức giao tiếp giữa các service
-trong kiến trúc microservice. Ngoài ra, người dùng có thể tận dụng các
-plugin của Kafka để giải quyết các vấn đề như nhân bản dữ liệu, \ldots{}
-
-\hypertarget{debezium}{%
-\subsection{Debezium}\label{debezium}}
-
-Debezium  \cite{Hat22} là một Kafka Connector có nhiệm vụ đọc và chuyển hóa log của cơ
-sở dữ liệu thành các Kafka Message và gửi chúng vào Kafka. Debezium
-thường được sử dụng để nhân bản dữ liệu từ các nguồn khác nhau.
-
-\hypertarget{minio}{%
-\subsection{MinIO}\label{minio}}
-
-MinIO \cite{Min22} là một object storage server mã nguồn mở và implement public API
-của Amazon S3. MinIO có thể được cài đặt để lưu trữ file trong các
-khoảng thời gian khác nhau, tùy vào nhu cầu của người sử dụng.
-
-\hypertarget{docker}{%
-\subsection{Docker}\label{docker}}
-
-Docker \cite{Docker22} là nền tảng phần mềm cho phép người dùng dựng, kiểm thử và triển
-khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn
-vị tiêu chuẩn hóa được gọi là \emph{container}.
-
-Một container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện,
-công cụ hệ thống, mã nguồn và thời gian chạy. Bằng cách sử dụng Docker,
-người dùng có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào
-bất kỳ môi trường nào và biết chắc rằng mã nguồn sẽ chạy được. Do những
-đặc điểm này, Docker được sử dụng phổ biến trong các hệ thống với kiến
-trúc Microservice.
-
-\hypertarget{nginx}{%
-\subsection{Nginx}\label{nginx}}
-
-Nginx \cite{Nginx22} là một phần mềm web server mã nguồn mở nổi tiếng. Ban đầu nó dùng
-để phục vụ web HTTP. Tuy nhiên, ngày nay nó cũng được dùng làm reverse
-proxy, HTTP load balancer và email proxy như IMAP, POP3, và SMTP.
-
-\hypertarget{certbot}{%
-\subsection{Certbot}\label{certbot}}
-
-Certbot là một công cụ của tổ chức Let's Encrypt để cung cấp và thu hồi
-chứng chỉ SSL/TLS. Bằng việc sử dụng công cụ này kết hợp với web server
-Nginx, người dùng có thể nâng cấp server của mình lên HTTPS một cách dễ
-dàng và nhanh chóng.
 
 \hypertarget{react}{%
 \subsection{React}\label{react}}
