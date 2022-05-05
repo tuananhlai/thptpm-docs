@@ -3,31 +3,72 @@
 
 \begin{document}
 
-\begin{titlepage}	
+\begin{titlepage}
+	\begin{tikzpicture}[overlay,remember picture]
+		\draw [line width=0.8mm]
+		($ (current page.north west) + (2.9cm,-2.4cm) $)
+		rectangle
+		($ (current page.south east) + (-1.9cm,2.9cm) $);
+		\draw [line width=0.2mm]
+		($ (current page.north west) + (3cm,-2.5cm) $)
+		rectangle
+		($ (current page.south east) + (-2cm,3cm) $);
+	\end{tikzpicture}
+
 	\begin{center}
 		\textbf{ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
 		\textbf{ĐẠI HỌC CÔNG NGHỆ}\\
 		--------------
-	
+
 		\vspace*{30pt}
-		
+
 		\includegraphics[width=0.4\textwidth]{./images/uet.jpg}
-		
+
 		\vspace*{50pt}
-		
+
 		\textbf{Khóa luận tốt nghiệp}
-		
+
 		{\huge Thiết kế, xây dựng và triển khai hệ thống quản lý thực tập tại trường ĐHCN}
 		\vspace*{30pt}
 
-		\textit{Giảng viên hướng dẫn: TS. Dương Lê Minh}
-		
+		\textbf{\large Lại Tuấn Anh}
+
 		\vfill
 	\end{center}
-	
-	
+
+
 	\begin{center}
-		\textbf{Hà Nội, 2021}
+		\textbf{Hà Nội, 2022}
 	\end{center}
 \end{titlepage}
+
+\begin{titlepage}
+	\begin{center}
+		\textbf{ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
+		\textbf{ĐẠI HỌC CÔNG NGHỆ}\\
+		--------------
+
+		\vspace*{120pt}
+
+		\textbf{Khóa luận tốt nghiệp}
+
+		{\huge Thiết kế, xây dựng và triển khai hệ thống quản lý thực tập tại trường ĐHCN}
+		\vspace*{30pt}
+
+		\textbf{\large Lại Tuấn Anh}
+
+		\vspace*{30pt}
+
+		\textbf{\large Giảng viên hướng dẫn: TS. Dương Lê Minh} \\
+
+		\textbf{\large Đồng giảng viên hướng dẫn: PGS.TS. Phạm Thanh Giang}
+
+		\vfill
+	\end{center}
+
+	\begin{center}
+		\textbf{Hà Nội, 2022}
+	\end{center}
+\end{titlepage}
+
 \end{document}
