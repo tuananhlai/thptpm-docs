@@ -1,5 +1,11 @@
 # Khóa luận tốt nghiệp
 
+## More setup...
+
+```sh
+sudo apt update && sudo apt install texlive-latex-extra biber texlive-lang-other texlive-extra-utils;
+```
+
 ## Build file
 
 1. Save bất kỳ file nào, file `main.tex` sẽ tự build lại.
