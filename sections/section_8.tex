@@ -7,28 +7,52 @@ Phần này mô tả sản phẩm cuối sau quá trình phát triển của em,
 hình ảnh của giao diện người dùng thuộc phần client. Phần giao diện
 người dùng sẽ được bạn Phạm Thị Dân mô tả kỹ hơn ở một báo cáo khác.
 
-\subsection{Luồng đăng nhập}
+\subsection{Luồng sử dụng của sinh viên}
 
-Người dùng điền thông tin tài khoản và mật khẩu, hoặc lựa chọn đăng nhập
-bằng Google để đăng nhập vào hệ thống. Hệ thống sẽ dựa vào vai trò của
-người dùng là sinh viên, giảng viên, đối tác hay quản trị viên để điều
-hướng người dùng tới trang phù hợp.
+\paragraph*{Sinh viên đọc bài đăng}
 
-Hình \ref{fig:login_page} mô tả màn hình đăng nhập của hệ thống.
+\begin{itemize}
+\item Hình \ref{fig:student_home_page}: Sinh viên truy cập trang chủ và chọn bài đăng muốn đọc.
+\item Hình \ref{fig:student_read_post_page}: Giao diện hiển thị bài đăng đã chọn.
+\end{itemize}
 
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image5.png}
-	\caption{Luồng hình đăng nhập}
-	\label{fig:login_page}
+	\includegraphics[width=\linewidth]{./images/image37.png}
+	\caption{Luồng \emph{Đọc bài đăng}: Truy cập trang chủ và chọn bài đăng muốn đọc}
+	\label{fig:student_home_page}
 \end{figure}
 
-\subsection{Luồng sử dụng của sinh viên}
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image38.png} %TODO: replace image
+	\caption{Luồng \emph{Đọc bài đăng}: Giao diện hiển thị bài đăng đã chọn}
+	\label{fig:student_read_post_page}
+\end{figure}
 
 \paragraph*{Sinh viên đăng ký thực tập}
 
-Tại màn hình trang chủ, sinh viên tìm kiếm công ty mà mình đang thực tập và đăng ký. Sau khi đăng ký thành công thì hệ thống sẽ thông báo lại như hình.
+\begin{itemize}
+	\item Hình \ref{fig:student_find_company}: Sinh viên tìm kiếm công ty mà mình đang thực tập và đăng ký. 
+	\item Hình \ref{fig:student_register_company_success}: Nếuthành công,  hệ thống hiển thị thông báo đăng ký thành công.
+	\item Hình \ref{fig:student_register_company_failed}: Nếu thất bại, hệ thống hiển thị thông báo đăng ký thất bại.
+\end{itemize}
 
-Hình \ref{fig:student_page} mô tả màn hình đăng ký thực tập của sinh viên.
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image39.png}
+	\caption{Luồng \emph{Sinh viên đăng ký thực tập}: Tìm kiếm công ty}
+	\label{fig:student_find_company}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image40-1.png}
+	\caption{Luồng \emph{Sinh viên đăng ký thực tập}: Đăng ký thành công}
+	\label{fig:student_register_company_success}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image40.png}
+	\caption{Luồng \emph{Sinh viên đăng ký thực tập}: Đăng ký thất bại}
+	\label{fig:student_register_company_failed}
+\end{figure}
 
 \paragraph*{Sinh viên xem thông tin thực tập}
 Sau khi đăng ký thực tập thành công, sinh viên vào kiểm tra thông tin thực tập của bản thân. Tại đây, sinh viên có thể xem thông tin công ty thực tập đã đúng chưa,  giảng viên hướng dẫn là ai, và nộp báo cáo.
@@ -36,15 +60,65 @@ Sau khi đăng ký thực tập thành công, sinh viên vào kiểm tra thông 
 Hình \ref{fig:view_internship_page} mô tả màn hình trang thông tin thực tập.
 
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image15.png}
-	\caption{Sinh viên đăng ký thực tập}
-	\label{fig:student_page}
+	\includegraphics[width=\linewidth]{./images/image17.png}
+	\caption{Luồng \emph{Sinh viên xem thông tin thực tập}}
+	\label{fig:view_internship_page}
+\end{figure}
+
+\paragraph*{Sinh viên nộp báo cáo thực tập}
+
+\begin{itemize}
+	\item Hình \ref{fig:student_internship_info}: Sinh viên truy cập trang thông tin thực tập và kéo xuống phần Nộp báo cáo. 
+	\item Hình \ref{fig:student_choose_file}: Sinh viên chọn tệp.
+	\item Hình \ref{fig:student_upload_report}: Sinh viên tải lên báo cáo.
+\end{itemize}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image41.png}
+	\caption{Luồng \emph{Sinh viên nộp báo cáo}: Truy cập phần nộp báo cáo}
+	\label{fig:student_internship_info}
 \end{figure}
 
 \begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image17.png}
-	\caption{Sinh viên xem thông tin thực tập}
-	\label{fig:view_internship_page}
+	\includegraphics[width=\linewidth]{./images/image42.png}
+	\caption{Luồng \emph{Sinh viên nộp báo cáo}: Chọn tệp}
+	\label{fig:student_choose_file}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image43.png}
+	\caption{Luồng \emph{Sinh viên nộp báo cáo}: Tải lên báo cáo}
+	\label{fig:student_upload_report}
+\end{figure}
+
+\paragraph*{Sinh viên xem thông tin cá nhân}
+Sinh viên truy cập trang thông tin cá nhân. Tại đây sinh viên có thể sửa thông tin cá nhân, đổi mật khẩu.
+
+Hình \ref{fig:view_info_page} mô tả màn hình trang thông tin cá nhân.
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image44.png}
+	\caption{Luồng \emph{Sinh viên xem thông tin cá nhân}}
+	\label{fig:view_info_page}
+\end{figure}
+
+\paragraph*{Sinh viên thay đổi thông tin cá nhân}
+
+\begin{itemize}
+	\item Hình \ref{fig:student_access_info}: Sinh viên truy cập phần thông tin cá nhân. 
+	\item Hình \ref{fig:student_edit_info}: Sinh viên sửa thông tin cá nhân, đổi mật khẩu.
+\end{itemize}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image45.png}
+	\caption{Luồng \emph{Sinh viên thay đổi thông tin cá nhân}: Truy cập trang thông tin cá nhân}
+	\label{fig:student_access_info}
+\end{figure}
+
+\begin{figure}[]
+	\includegraphics[width=\linewidth]{./images/image46.png}
+	\caption{Luồng \emph{Sinh viên thay đổi thông tin cá nhân}: Sinh viên thay đổi thông tin cá nhân}
+	\label{fig:student_edit_info}
 \end{figure}
 
 \subsection{Luồng sử dụng của giảng viên}
