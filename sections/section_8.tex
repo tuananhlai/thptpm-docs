@@ -5,13 +5,31 @@
 
 Phần này mô tả lại một vài luồng hoạt động chính của sinh viên, giảng viên, đối tác, quản trị viên Khoa và quản trị viên hệ thống.
 
-\subsection{Luồng sử dụng của sinh viên}
+\subsection{Môi trường phát triển}
+
+\begin{itemize}
+	\item Công cụ thiết kế giao diện người dùng: Figma, tổng cộng khoảng 30 màn hình chính
+	\item Hệ điều hành: Ubuntu 20.04.3 LTS
+	\item Ngôn ngữ lập trình: TypeScript
+	\item Công cụ lập trình: Visual Studio Code
+	\item Nền tảng sử dụng: React, thư viện Material UI
+\end{itemize}
+
+\subsection{Môi trường thực nghiệm}
+
+\begin{itemize}
+	\item Dịch vụ web hosting Gitlab Pages
+\end{itemize}
+
+\subsection{Kết quả thực nghiệm}
+
+\subsubsection{Luồng sử dụng của sinh viên}
 
 \paragraph*{Sinh viên đọc bài đăng}
 
 \begin{itemize}
-\item Hình \ref{fig:student_home_page}: Sinh viên truy cập trang chủ và chọn bài đăng muốn đọc.
-\item Hình \ref{fig:student_read_post_page}: Giao diện hiển thị bài đăng đã chọn.
+	\item Hình \ref{fig:student_home_page}: Sinh viên truy cập trang chủ và chọn bài đăng muốn đọc.
+	\item Hình \ref{fig:student_read_post_page}: Giao diện hiển thị bài đăng đã chọn.
 \end{itemize}
 
 \begin{figure}[]
@@ -29,7 +47,7 @@ Phần này mô tả lại một vài luồng hoạt động chính của sinh v
 \paragraph*{Sinh viên đăng ký thực tập}
 
 \begin{itemize}
-	\item Hình \ref{fig:student_find_company}: Sinh viên tìm kiếm công ty mà mình đang thực tập và đăng ký. 
+	\item Hình \ref{fig:student_find_company}: Sinh viên tìm kiếm công ty mà mình đang thực tập và đăng ký.
 	\item Hình \ref{fig:student_register_company_success}: Nếu thành công, hệ thống hiển thị thông báo đăng ký thành công.
 	\item Hình \ref{fig:student_register_company_failed}: Nếu thất bại, hệ thống hiển thị thông báo đăng ký thất bại.
 \end{itemize}
@@ -63,7 +81,7 @@ Hình \ref{fig:view_internship_page} mô tả màn hình trang thông tin thực
 	\label{fig:view_internship_page}
 \end{figure}
 
-\subsection{Luồng sử dụng của giảng viên}
+\subsubsection{Luồng sử dụng của giảng viên}
 
 \paragraph*{Giảng viên xem danh sách sinh viên đang hướng dẫn}
 
@@ -78,7 +96,7 @@ Hình \ref{fig:working_student_page} mô tả màn hình danh sách sinh viên �
 \end{figure}
 
 \paragraph*{Giảng viên tải xuống báo cáo}
-Hình \ref{fig:lecturer_access_students}: Giảng viên truy cập trang sinh viên đang hướng dẫn và tải xuống báo cáo của sinh viên. 
+Hình \ref{fig:lecturer_access_students}: Giảng viên truy cập trang sinh viên đang hướng dẫn và tải xuống báo cáo của sinh viên.
 
 \begin{figure}[]
 	\includegraphics[width=\linewidth]{./images/image64.png}
@@ -86,7 +104,7 @@ Hình \ref{fig:lecturer_access_students}: Giảng viên truy cập trang sinh vi
 	\label{fig:lecturer_access_students}
 \end{figure}
 
-\subsection{Luồng sử dụng của đối tác}
+\subsubsection{Luồng sử dụng của đối tác}
 
 \paragraph*{Đối tác xem danh sách bài đăng}
 
@@ -124,12 +142,12 @@ Hình \ref{fig:partner_view_list_requests_page} mô tả màn hình danh sách y
 	\label{fig:partner_view_list_requests_page}
 \end{figure}
 
-\subsection{Luồng sử dụng của quản trị viên Khoa}
+\subsubsection{Luồng sử dụng của quản trị viên Khoa}
 
 \paragraph*{Quản trị viên Khoa tạo kỳ thực tập mới}
 
 \begin{itemize}
-	\item Hình \ref{fig:org_admin_access_list_terms}: Quản trị viên Khoa truy cập trang Danh sách kỳ thực tập. 
+	\item Hình \ref{fig:org_admin_access_list_terms}: Quản trị viên Khoa truy cập trang Danh sách kỳ thực tập.
 	\item Hình \ref{fig:org_admin_add_term}: Quản trị viên Khoa thực hiện tạo kỳ thực tập mới.
 	\item Hình \ref{fig:org_admin_add_term_success}: Tạo kỳ thực tập thành công.
 \end{itemize}
@@ -167,7 +185,7 @@ Hình \ref{fig:orgadmin_list_posts} mô tả màn hình danh sách bài đăng c
 \paragraph*{Quản trị viên Khoa chấp nhận / từ chối yêu cầu thực tập}
 
 \begin{itemize}
-	\item Hình \ref{fig:org_admin_access_list_requests}: Quản trị viên truy cập trang Yêu cầu thực tập trong kỳ thực tập. 
+	\item Hình \ref{fig:org_admin_access_list_requests}: Quản trị viên truy cập trang Yêu cầu thực tập trong kỳ thực tập.
 	\item Hình \ref{fig:org_admin_select_requests}: Quản trị viên chọn danh sách sinh viên và chọn tùy chọn Chấp nhận / Từ chối.
 \end{itemize}
 
@@ -183,12 +201,12 @@ Hình \ref{fig:orgadmin_list_posts} mô tả màn hình danh sách bài đăng c
 	\label{fig:org_admin_select_requests}
 \end{figure}
 
-\subsection{Luồng sử dụng của quản trị viên hệ thống}
+\subsubsection{Luồng sử dụng của quản trị viên hệ thống}
 
 \paragraph*{Quản trị viên tạo Khoa mới}
 
 \begin{itemize}
-	\item Hình \ref{fig:admin_access_list_orgs}: Quản trị viên truy cập danh sách Khoa. 
+	\item Hình \ref{fig:admin_access_list_orgs}: Quản trị viên truy cập danh sách Khoa.
 	\item Hình \ref{fig:admin_add_org}: Quản trị viên chọn Thêm Khoa mới và thực hiện tạo mới.
 	\item Hình \ref{fig:admin_add_org_success}: Tạo mới thành công.
 \end{itemize}
@@ -214,7 +232,7 @@ Hình \ref{fig:orgadmin_list_posts} mô tả màn hình danh sách bài đăng c
 \paragraph*{Quản trị viên tạo Lớp mới}
 
 \begin{itemize}
-	\item Hình \ref{fig:admin_access_list_classes}: Quản trị viên truy cập danh sách lớp. 
+	\item Hình \ref{fig:admin_access_list_classes}: Quản trị viên truy cập danh sách lớp.
 	\item Hình \ref{fig:admin_add_class}: Quản trị viên chọn Thêm lớp và thực hiện tạo mới.
 	\item Hình \ref{fig:admin_add_class_success}: Tạo mới thành công.
 \end{itemize}
