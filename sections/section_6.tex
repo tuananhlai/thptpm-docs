@@ -110,35 +110,6 @@ Hệ thống UETWork cũ đã phục vụ nhu cầu quản lý thực tập củ
 
 Với dashboard này, người dùng có thể nhìn được các thông số quan trọng nhanh chóng và đưa ra hành động kịp thời.
 
-\hypertarget{ux111a-nguxf4n-ngux1eef-1}{%
-	\subsection{Đa ngôn ngữ}\label{ux111a-nguxf4n-ngux1eef-1}}
-
-Hệ thống cũ chưa hoàn thiện tốt về mặt ngôn ngữ do giao diện chứa cả tiếng Anh và tiếng Việt, khiến trải nghiệm người dùng không nhất quán. Hình \ref{fig:old_admin_page} cho thấy màn hình quản trị viên của hệ thống cũ. Ở đây, phần sidebar được viết hoàn toàn bằng tiếng Anh, nhưng phần content lại được viết bằng tiếng Việt.
-
-\begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/old_admin_page.png}
-	\caption{Màn hình quản trị viên của hệ thống cũ}
-	\label{fig:old_admin_page}
-\end{figure}
-
-Hệ thống mới đã đặt mục tiêu hỗ trợ đa ngôn ngữ từ thời điểm ban đầu. Trên giao diện, ngườ dùng có thể lựa chọn ngôn ngữ phù hợp nhất với bản thân. Với tính năng này, sinh viên quốc tế có thể sử dụng hệ thống dễ dàng hơn.
-
-Để làm được việc này, phần client sử dụng thư viện i18next\footnote{\url{https://www.i18next.com/}}, cho phép nhà phát triển tạo ra một file chứa toàn bộ nội dung được dịch.
-
-Hình \ref{fig:en_page} và \ref{fig:vi_page} mô tả 2 màn hình tiếng Anh và tiếng Việt của hệ thống.
-
-\begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image13.png}
-	\caption{Màn hình hệ thống (tiếng Anh)}
-	\label{fig:en_page}
-\end{figure}
-
-\begin{figure}[]
-	\includegraphics[width=\linewidth]{./images/image12.png}
-	\caption{Màn hình hệ thống (tiếng Việt)}
-	\label{fig:vi_page}
-\end{figure}
-
 \subsection{Tích hợp với hệ thống khác của nhà trường}
 
 Hệ thống UETWork cũ có kiến trúc Monolith và nhận yêu cầu qua giao thức HTTP. Các yêu cầu phải được xác thực và phân quyền trước khi xử lý, khiến cho việc tích hợp với các hệ thống khác trong nhà trường trở nên khó khăn.
