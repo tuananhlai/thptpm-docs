@@ -5,94 +5,75 @@
 
 \subsection{Hiện trạng}
 
-Hệ thống UETWork hiện tại được sinh ra để giúp sinh viên hoàn thành
-chuyên đề thực tập tại trường của mình. Hệ thống là một nền tảng kết nối
-giữa sinh viên và nhà tuyển dụng, giúp sinh viên tìm được nơi thực tập
-chất lượng dễ dàng hơn.
+Hệ thống UETWork hiện tại có chức năng chính là quản lý việc thực tập của các sinh viên trong khoa Công Nghệ Thông Tin. Hệ thống là một nền tảng kết nối giữa sinh viên và khoa, sinh viên và nhà tuyển dụng, giúp sinh viên tìm được nơi thực tập và giúp khoa quản lý được tình trạng thực tập của các sinh viên dễ dàng hơn.
 
 Tuy vậy, trong vòng 2 năm vừa qua, hệ thống đã biểu hiện một số nhược
 điểm như sau:
 
 \begin{itemize}
-\item
-  
-  Sinh viên được phép tạo công ty tùy ý, dẫn đến việc lặp dữ liệu.
-  
-\item
-  
-  Giao diện chưa rõ ràng, khó sử dụng cho người dùng.
-  
-\item
-  
-  Chi hỗ trợ cho người dùng của khoa Công Nghệ Thông Tin.
-  
-\item
-  
-  Không cung cấp tính năng cho giảng viên / công ty đối tác.
-  
-\item
-  
-  Chứa một số vấn đề về bảo mật / lỗi thiết kế. Ví dụ, hệ thống cho phép
-  người dùng đặt lại mật khẩu cho bất kỳ người dùng nào khác trên hệ
-  thống.
-  
-\item
-  
-  Mọi liên lạc với người dùng được thực hiện trong ứng dụng thay vì qua
-  email, khiến người dùng phải kiểm tra ứng dụng thường xuyên hơn và
-  tăng khả năng một thông báo bị bỏ qua.
-  
-\item
-  
-  Giao diện chưa hỗ trợ đa ngôn ngữ cho những sinh viên quốc tế.
-  
-\item
-  
-  Không có thống kê dữ liệu.
-  
-\item
-  
-  Thiếu bộ lọc dữ liệu cho các bảng.
-  
+	\item
+
+	      Chỉ hỗ trợ cho người dùng của khoa Công Nghệ Thông Tin.
+
+	\item
+
+	      Giao diện đăng ký thực tập cho phép sinh viên được tạo công ty tùy ý, dẫn đến việc lặp dữ liệu.
+
+	\item
+
+	      Không có giao diện và tính năng cho giảng viên và công ty đối tác.
+
+	\item
+
+	      Giao diện không hỗ trợ đa ngôn ngữ, chỉ có tiếng Việt, hạn chế mở rộng hệ thống ra toàn trường.
+
+	\item
+
+	      Không có giao diện và tính năng thống kê dữ liệu.
+
+	\item
+
+	      Thiếu giao diện và tính năng cho bộ lọc cho các bảng dữ liệu, ảnh hưởng đến trải nghiệm người dùng.
+
+	\item
+
+	      Chứa một số vấn đề về bảo mật / lỗi thiết kế. Ví dụ, giao diện hệ thống cho phép người dùng đặt lại mật khẩu cho bất kỳ người dùng nào khác trên hệ thống.
+
+	\item
+
+	      Mọi liên lạc với người dùng được thực hiện trong giao diện ứng dụng thay vì qua email, khiến người dùng phải kiểm tra ứng dụng thường xuyên hơn và tăng khả năng một thông báo bị bỏ qua.
+
 \end{itemize}
 
-Giải quyết vấn đề này đòi hỏi việc tái cấu trúc toàn bộ hệ thống thực tập hiện tại. Vì vậy,  việc thiết kế và phát triển một hệ thống mới kế thừa các ưu điểm và cải tiến các nhược điểm của hệ thống cũ là một nhu cầu thiết yếu hiện tại tại Khoa CNTT.
+Chính những nhược điểm trên của hệ thống cũ đã thúc đẩy nhu cầu thiết kế giao diện và phát triển lại một hệ thống quản lý thực tập mới mở rộng được cho tất cả các khoa trong trường, đồng thời khắc phục những thiếu sót của hệ thống cũ.
 
 \subsection{Nhu cầu quản lý thực tập tại trường Đại học Công Nghệ}
 
 Nhu cầu của nhà trường đối với hệ thống thực tập mới là như sau:
 
 \begin{itemize}
-\item
-  
-  Hỗ trợ người dùng của nhiều khoa khác nhau.
-  
-\item
-  
-  Cần tính năng chấm điểm / quản lý sinh viên cho người dùng giảng viên.
-  
-\item
-  
-  Cần tính năng quản lý sinh viên / chấp nhận yêu cầu thực tập cho người
-  dùng đối tác.
-  
-\item
-  
-  Cần có giao diện và API để thống kê dữ liệu.
-  
-\item
-  
-  Cần bộ lọc dữ liệu đầy đủ trong màn hình quản lý.
-\item Cần thông báo về các sự kiện trên hệ thống cho người dùng. Ví dụ, sinh viên cần được biết khi có kết quả phỏng vấn để họ có thể thực hiện các hành động tiếp theo.
-\end{itemize}
+	\item
 
-Ngoài các nhu cầu kể trên, hệ thống mới cần đem lại những cải thiện sau:
-\begin{itemize}
-  \item Giao diện cần được thiết kế dễ hiểu hơn, giúp người dùng hoàn thành
-  công việc trong thời gian nhanh nhất có thể.
-  \item Dữ liệu phải được làm sạch. Ví dụ, tên công ty phải được duyệt bởi
-    quản trị viên trước khi lưu vào cơ sở dữ liệu
-  \item Cần hỗ trợ đa ngôn ngữ cho sinh viên quốc tế.
+	      Cần có giao diện đầy đủ cho tất cả các role người dùng, hướng đến phục vụ nhiều khoa khác nhau.
+
+	\item
+
+	      Giao diện cho tính năng chấm điểm / quản lý sinh viên cho người dùng giảng
+	      viên.
+
+	\item
+
+	      Giao diện cho tính năng quản lý sinh viên / chấp nhận yêu cầu thực tập cho
+	      người dùng đối tác.
+
+	\item
+
+	      Giao diện cho phần thống kê dữ liệu.
+
+	\item
+
+	      Giao diện bộ lọc đầy đủ của bảng dữ liệu trong các màn hình quản lý.
+	\item Giao diện cần hỗ trợ đa ngôn ngữ.
 \end{itemize}
 
 \end{document}
