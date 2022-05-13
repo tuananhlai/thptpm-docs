@@ -46,6 +46,17 @@
 \end{titlepage}
 
 \begin{titlepage}
+	\begin{tikzpicture}[overlay,remember picture]
+		\draw [line width=0.8mm]
+		($ (current page.north west) + (2.9cm,-2.4cm) $)
+		rectangle
+		($ (current page.south east) + (-1.9cm,2.9cm) $);
+		\draw [line width=0.2mm]
+		($ (current page.north west) + (3cm,-2.5cm) $)
+		rectangle
+		($ (current page.south east) + (-2cm,3cm) $);
+	\end{tikzpicture}
+
 	\begin{center}
 		\textbf{ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
 		\textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ}\\
