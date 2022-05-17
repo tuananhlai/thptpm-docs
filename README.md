@@ -25,4 +25,4 @@ Sau đó, cite tài liệu này trong code như sau:
 
 <https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX>
 
-By Tuan Anh
+By Tuan Anh,
